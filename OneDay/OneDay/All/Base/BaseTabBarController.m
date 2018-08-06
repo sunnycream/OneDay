@@ -21,16 +21,16 @@
     [super viewDidLoad];
     
     [self addChildControllers];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor grayColor], NSFontAttributeName:[UIFont fontWithName:@"Marion-Italic" size:12.0]} forState:UIControlStateNormal];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor], NSFontAttributeName:[UIFont fontWithName:@"Marion-Italic" size:12.0]} forState:UIControlStateSelected];
 }
 
 - (void)addChildControllers {
-    OneDayViewController *c1 = [[OneDayViewController alloc] init];
-    CalendarViewController *c2 = [[CalendarViewController alloc] init];
-    MeViewController *c3 = [[MeViewController alloc] init];
-
-    [self setChildControllers:c1 title:@"一天" normalImage:[UIImage imageNamed:@"tab_bar_oneday_normal"] selectedImage:[UIImage imageNamed:@"tab_bar_oneday_selected"]];
-    [self setChildControllers:c2 title:@"日历" normalImage:[UIImage imageNamed:@"tab_bar_calendar_normal"] selectedImage:[UIImage imageNamed:@"tab_bar_canlendar_selected"]];
-    [self setChildControllers:c3 title:@"我" normalImage:[UIImage imageNamed:@"tab_bar_me_normal"] selectedImage:[UIImage imageNamed:@"tab_bar_me_selected"]];
+    [self setChildControllers:[[OneDayViewController alloc] init] title:@"一天" normalImage:[[UIImage imageNamed:@"tab_bar_oneday_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tab_bar_oneday_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [self setChildControllers:[[CalendarViewController alloc] init] title:@"日历" normalImage:[[UIImage imageNamed:@"tab_bar_calendar_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tab_bar_canlendar_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [self setChildControllers:[[MeViewController alloc] init] title:@"我" normalImage:[[UIImage imageNamed:@"tab_bar_me_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tab_bar_me_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 }
 
 - (void)setChildControllers:(UIViewController *)viewController title:(NSString *)title normalImage:(UIImage *)normalImage selectedImage:(UIImage *)selectedImage {
@@ -39,7 +39,7 @@
     nav.tabBarItem.image = normalImage;
     nav.tabBarItem.selectedImage = selectedImage;
 
-    viewController.navigationItem.title = title;
+    viewController.title = title;
 
     [self addChildViewController:nav];
 }
