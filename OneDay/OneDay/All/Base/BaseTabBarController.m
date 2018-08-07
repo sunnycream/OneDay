@@ -29,7 +29,7 @@
 
 - (void)addChildControllers {
     [self setChildControllers:[[OneDayViewController alloc] init] title:@"一天" normalImage:[[UIImage imageNamed:@"tab_bar_oneday_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tab_bar_oneday_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    [self setChildControllers:[[CalendarViewController alloc] init] title:@"日历" normalImage:[[UIImage imageNamed:@"tab_bar_calendar_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tab_bar_canlendar_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [self setChildControllers:[[CalendarViewController alloc] init] title:@"相册" normalImage:[[UIImage imageNamed:@"tab_bar_album_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tab_bar_album_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [self setChildControllers:[[MeViewController alloc] init] title:@"我" normalImage:[[UIImage imageNamed:@"tab_bar_me_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tab_bar_me_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 }
 

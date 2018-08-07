@@ -6,8 +6,8 @@
 //  Copyright © 2018年 admin. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "BaseTableViewController.h"
 
-@interface MeViewController : BaseViewController
+@interface MeViewController : BaseTableViewController
 
 @end
