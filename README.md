@@ -1,2 +1,1 @@
 # OneDay
-for love
