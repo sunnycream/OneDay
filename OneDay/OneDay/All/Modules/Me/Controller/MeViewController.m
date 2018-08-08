@@ -8,6 +8,7 @@
 
 #import "MeViewController.h"
 
+static NSString *cellID = @"cellID";
 @interface MeViewController ()
 
 @property (nonatomic, strong) NSMutableArray *imageArray;
@@ -20,20 +21,49 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
+    [self.tableView setTableHeaderView:self.headerView];
+    [self userInfo];
+    
     NSArray *text = @[@"统计", @"账号", @"设置"];
     NSArray *image = @[@"tab_bar_oneday_normal", @"tab_bar_album_normal", @"tab_bar_me_normal"];
     [self.dataArray addObjectsFromArray:text];
     [self.imageArray addObjectsFromArray:image];
+}
+
+- (void)userInfo {
+    //头像
+    UIImageView *avatar = [[UIImageView alloc] init];
+    avatar.backgroundColor = [UIColor blackColor];
+    [self.headerView addSubview:avatar];
     
-    //为啥不走masonry布局
-//    [self.headerView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.tableView.mas_top);
-//        make.left.equalTo(self.tableView.mas_left);
-//        make.right.equalTo(self.tableView.mas_right);
-//        make.height.mas_offset(100);
-//    }];
+    //昵称
+    UILabel *nickname = [[UILabel alloc] init];
+    nickname.text = @"nickname";
+    nickname.font = [UIFont boldSystemFontOfSize:16];
+    [self.headerView addSubview:nickname];
     
-    [self.tableView setTableHeaderView:self.headerView];
+    //简介
+    UILabel *intro = [[UILabel alloc] init];
+    intro.text = @"intro...";
+    intro.font = [UIFont systemFontOfSize:14];
+    [self.headerView addSubview:intro];
+    
+    [avatar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.headerView.mas_top).offset(20);
+        make.left.equalTo(self.headerView.mas_left).offset(20);
+        make.size.mas_offset(CGSizeMake(60, 60));
+    }];
+    
+    [nickname mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(avatar.mas_top).offset(5);
+        make.left.equalTo(avatar.mas_right).offset(10);
+    }];
+    
+    [intro mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(nickname.mas_left);
+        make.bottom.equalTo(avatar.mas_bottom).offset(-5);
+    }];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -45,16 +75,20 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellID = @"cellID";
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (!cell) {
-        [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
     }
     cell.textLabel.text = [self.dataArray objectAtIndex:indexPath.row];
     cell.imageView.image = [UIImage imageNamed:[self.imageArray objectAtIndex:indexPath.row]];
     
     return cell;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section; {
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 10)];
+    view.backgroundColor = [UIColor yellowColor];
+
+    return view;
 }
 
 - (NSMutableArray *)imageArray {
@@ -68,7 +102,6 @@
     if (!_headerView) {
         _headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 100)];
         _headerView.backgroundColor = [UIColor greenColor];
-        [self.tableView addSubview:_headerView];
     }
     return _headerView;
 }

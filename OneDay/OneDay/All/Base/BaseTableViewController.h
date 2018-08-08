@@ -6,9 +6,9 @@
 //  Copyright © 2018年 admin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface BaseTableViewController : UIViewController
+@interface BaseTableViewController : BaseViewController
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataArray;

@@ -10,9 +10,11 @@
 		8449E17D211846A100DF4F21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449E168211846A100DF4F21 /* AppDelegate.m */; };
 		8449E17E211846A100DF4F21 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449E16E211846A100DF4F21 /* MeViewController.m */; };
 		8449E17F211846A100DF4F21 /* OneDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449E16F211846A100DF4F21 /* OneDayViewController.m */; };
-		8449E180211846A100DF4F21 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449E170211846A100DF4F21 /* CalendarViewController.m */; };
 		8449E181211846A100DF4F21 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449E173211846A100DF4F21 /* BaseViewController.m */; };
 		8449E182211846A100DF4F21 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449E175211846A100DF4F21 /* BaseTabBarController.m */; };
+		845AB11A2119D2FA002DE3FE /* AlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB1192119D2FA002DE3FE /* AlbumViewController.m */; };
+		845AB11D2119D43C002DE3FE /* BaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB11C2119D43C002DE3FE /* BaseCollectionViewController.m */; };
+		845AB1202119D6FF002DE3FE /* AlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB11F2119D6FF002DE3FE /* AlbumCell.m */; };
 		84D685B5211889AB003A9E90 /* tab_bar_oneday_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D685B2211889AA003A9E90 /* tab_bar_oneday_selected.png */; };
 		84D685B7211889AB003A9E90 /* tab_bar_me_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D685B4211889AB003A9E90 /* tab_bar_me_selected.png */; };
 		84D685B921188A7B003A9E90 /* tab_bar_oneday_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D685B821188A7B003A9E90 /* tab_bar_oneday_normal.png */; };
@@ -34,15 +36,19 @@
 		8449E168211846A100DF4F21 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8449E16B211846A100DF4F21 /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
 		8449E16C211846A100DF4F21 /* OneDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneDayViewController.h; sourceTree = "<group>"; };
-		8449E16D211846A100DF4F21 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		8449E16E211846A100DF4F21 /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
 		8449E16F211846A100DF4F21 /* OneDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneDayViewController.m; sourceTree = "<group>"; };
-		8449E170211846A100DF4F21 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		8449E173211846A100DF4F21 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		8449E174211846A100DF4F21 /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
 		8449E175211846A100DF4F21 /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
 		8449E176211846A100DF4F21 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		845AB1172119B86E002DE3FE /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		845AB1182119D2FA002DE3FE /* AlbumViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlbumViewController.h; sourceTree = "<group>"; };
+		845AB1192119D2FA002DE3FE /* AlbumViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumViewController.m; sourceTree = "<group>"; };
+		845AB11B2119D43C002DE3FE /* BaseCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCollectionViewController.h; sourceTree = "<group>"; };
+		845AB11C2119D43C002DE3FE /* BaseCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCollectionViewController.m; sourceTree = "<group>"; };
+		845AB11E2119D6FF002DE3FE /* AlbumCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlbumCell.h; sourceTree = "<group>"; };
+		845AB11F2119D6FF002DE3FE /* AlbumCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumCell.m; sourceTree = "<group>"; };
 		84D685B2211889AA003A9E90 /* tab_bar_oneday_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_bar_oneday_selected.png; sourceTree = "<group>"; };
 		84D685B4211889AB003A9E90 /* tab_bar_me_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_bar_me_selected.png; sourceTree = "<group>"; };
 		84D685B821188A7B003A9E90 /* tab_bar_oneday_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_bar_oneday_normal.png; sourceTree = "<group>"; };
@@ -81,11 +87,11 @@
 		8449E15D2118467F00DF4F21 /* All */ = {
 			isa = PBXGroup;
 			children = (
+				8449E15E211846A100DF4F21 /* Resource */,
 				845AB1142119A0D0002DE3FE /* Config */,
 				8449E172211846A100DF4F21 /* Base */,
 				8449E166211846A100DF4F21 /* Delegate */,
 				8449E169211846A100DF4F21 /* Modules */,
-				8449E15E211846A100DF4F21 /* Resource */,
 			);
 			path = All;
 			sourceTree = "<group>";
@@ -123,23 +129,11 @@
 		8449E169211846A100DF4F21 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				8449E16A211846A100DF4F21 /* Controller */,
-				84F36E7F21199AF300C571C2 /* View */,
+				84C5A6F0211A8B6600E96CAB /* OneDay */,
+				84C5A6F2211A8B7D00E96CAB /* Album */,
+				84C5A6F1211A8B7700E96CAB /* Me */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		8449E16A211846A100DF4F21 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				8449E16D211846A100DF4F21 /* CalendarViewController.h */,
-				8449E170211846A100DF4F21 /* CalendarViewController.m */,
-				8449E16C211846A100DF4F21 /* OneDayViewController.h */,
-				8449E16F211846A100DF4F21 /* OneDayViewController.m */,
-				8449E16B211846A100DF4F21 /* MeViewController.h */,
-				8449E16E211846A100DF4F21 /* MeViewController.m */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		8449E172211846A100DF4F21 /* Base */ = {
@@ -149,6 +143,8 @@
 				8449E173211846A100DF4F21 /* BaseViewController.m */,
 				84F36E782119856700C571C2 /* BaseTableViewController.h */,
 				84F36E792119856700C571C2 /* BaseTableViewController.m */,
+				845AB11B2119D43C002DE3FE /* BaseCollectionViewController.h */,
+				845AB11C2119D43C002DE3FE /* BaseCollectionViewController.m */,
 				8449E174211846A100DF4F21 /* BaseTabBarController.h */,
 				8449E175211846A100DF4F21 /* BaseTabBarController.m */,
 			);
@@ -163,11 +159,65 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
-		84F36E7F21199AF300C571C2 /* View */ = {
+		84C5A6F0211A8B6600E96CAB /* OneDay */ = {
 			isa = PBXGroup;
 			children = (
+				84C5A6F3211A8B8F00E96CAB /* Controller */,
+			);
+			path = OneDay;
+			sourceTree = "<group>";
+		};
+		84C5A6F1211A8B7700E96CAB /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				84C5A6F6211A8BB300E96CAB /* Controller */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		84C5A6F2211A8B7D00E96CAB /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				84C5A6F5211A8BAB00E96CAB /* Controller */,
+				84C5A6F4211A8BA600E96CAB /* View */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		84C5A6F3211A8B8F00E96CAB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8449E16C211846A100DF4F21 /* OneDayViewController.h */,
+				8449E16F211846A100DF4F21 /* OneDayViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		84C5A6F4211A8BA600E96CAB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				845AB11E2119D6FF002DE3FE /* AlbumCell.h */,
+				845AB11F2119D6FF002DE3FE /* AlbumCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		84C5A6F5211A8BAB00E96CAB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				845AB1182119D2FA002DE3FE /* AlbumViewController.h */,
+				845AB1192119D2FA002DE3FE /* AlbumViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		84C5A6F6211A8BB300E96CAB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8449E16B211846A100DF4F21 /* MeViewController.h */,
+				8449E16E211846A100DF4F21 /* MeViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		84F8221E210979BB0006A913 = {
@@ -307,13 +357,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8449E17D211846A100DF4F21 /* AppDelegate.m in Sources */,
+				845AB1202119D6FF002DE3FE /* AlbumCell.m in Sources */,
+				845AB11D2119D43C002DE3FE /* BaseCollectionViewController.m in Sources */,
 				8449E181211846A100DF4F21 /* BaseViewController.m in Sources */,
+				845AB11A2119D2FA002DE3FE /* AlbumViewController.m in Sources */,
 				84F8223A210979C30006A913 /* main.m in Sources */,
 				8449E182211846A100DF4F21 /* BaseTabBarController.m in Sources */,
 				8449E17F211846A100DF4F21 /* OneDayViewController.m in Sources */,
 				8449E17E211846A100DF4F21 /* MeViewController.m in Sources */,
 				84F36E7A2119856700C571C2 /* BaseTableViewController.m in Sources */,
-				8449E180211846A100DF4F21 /* CalendarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
