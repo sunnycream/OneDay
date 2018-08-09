@@ -53,7 +53,7 @@ static NSString *cellID = @"cellID";
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) collectionViewLayout:self.layout];
-        _collectionView.backgroundColor = [UIColor whiteColor];
+        _collectionView.backgroundColor = [Util colorWithHexString:@"#F3F3F3"];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         [self.view addSubview:_collectionView];

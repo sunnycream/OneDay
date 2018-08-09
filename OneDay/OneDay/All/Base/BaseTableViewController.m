@@ -41,12 +41,12 @@ static NSString *cellID = @"cellID";
 - (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) style:UITableViewStylePlain];
-//        _tableView.backgroundColor = [UIColor clearColor];
+        _tableView.backgroundColor = [Util colorWithHexString:@"#F3F3F3"];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.rowHeight = 50;
         _tableView.tableFooterView = [[UIView alloc] init];
-        _tableView.separatorInset = UIEdgeInsetsZero;
+//        _tableView.separatorInset = UIEdgeInsetsZero;
         [self.view addSubview:_tableView];
     }
     return _tableView;
