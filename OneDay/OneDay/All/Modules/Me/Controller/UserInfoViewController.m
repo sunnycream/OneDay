@@ -1,23 +1,23 @@
 //
-//  BaseViewController.m
+//  UserInfoViewController.m
 //  OneDay
 //
-//  Created by admin on 2018/8/1.
+//  Created by admin on 2018/8/9.
 //  Copyright © 2018年 admin. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "UserInfoViewController.h"
 
-@interface BaseViewController ()
+@interface UserInfoViewController ()
 
 @end
 
-@implementation BaseViewController
+@implementation UserInfoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"个人信息";
 }
 
 - (void)didReceiveMemoryWarning {

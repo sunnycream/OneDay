@@ -16,6 +16,14 @@
 		845AB11D2119D43C002DE3FE /* BaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB11C2119D43C002DE3FE /* BaseCollectionViewController.m */; };
 		845AB1202119D6FF002DE3FE /* AlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB11F2119D6FF002DE3FE /* AlbumCell.m */; };
 		84747E37211BE13200389965 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 84747E36211BE13200389965 /* Util.m */; };
+		84747E3A211BEF4800389965 /* SleepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84747E39211BEF4800389965 /* SleepViewController.m */; };
+		84747E3D211BEF6E00389965 /* DietViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84747E3C211BEF6E00389965 /* DietViewController.m */; };
+		84747E40211BEF7D00389965 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84747E3F211BEF7D00389965 /* BookViewController.m */; };
+		84747E43211BEFA700389965 /* MangaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84747E42211BEFA700389965 /* MangaViewController.m */; };
+		84747E46211C309100389965 /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84747E45211C309100389965 /* UserInfoViewController.m */; };
+		84747E49211C30C500389965 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84747E48211C30C500389965 /* SettingViewController.m */; };
+		84747E4C211C310B00389965 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84747E4B211C310B00389965 /* StatisticsViewController.m */; };
+		84747E4F211C34F100389965 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84747E4E211C34F100389965 /* AccountViewController.m */; };
 		84D685B5211889AB003A9E90 /* tab_bar_oneday_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D685B2211889AA003A9E90 /* tab_bar_oneday_selected.png */; };
 		84D685B7211889AB003A9E90 /* tab_bar_me_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D685B4211889AB003A9E90 /* tab_bar_me_selected.png */; };
 		84D685B921188A7B003A9E90 /* tab_bar_oneday_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D685B821188A7B003A9E90 /* tab_bar_oneday_normal.png */; };
@@ -52,6 +60,22 @@
 		845AB11F2119D6FF002DE3FE /* AlbumCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumCell.m; sourceTree = "<group>"; };
 		84747E35211BE13200389965 /* Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		84747E36211BE13200389965 /* Util.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		84747E38211BEF4800389965 /* SleepViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SleepViewController.h; sourceTree = "<group>"; };
+		84747E39211BEF4800389965 /* SleepViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SleepViewController.m; sourceTree = "<group>"; };
+		84747E3B211BEF6E00389965 /* DietViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DietViewController.h; sourceTree = "<group>"; };
+		84747E3C211BEF6E00389965 /* DietViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DietViewController.m; sourceTree = "<group>"; };
+		84747E3E211BEF7D00389965 /* BookViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
+		84747E3F211BEF7D00389965 /* BookViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
+		84747E41211BEFA700389965 /* MangaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MangaViewController.h; sourceTree = "<group>"; };
+		84747E42211BEFA700389965 /* MangaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MangaViewController.m; sourceTree = "<group>"; };
+		84747E44211C309100389965 /* UserInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
+		84747E45211C309100389965 /* UserInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
+		84747E47211C30C500389965 /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		84747E48211C30C500389965 /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		84747E4A211C310B00389965 /* StatisticsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
+		84747E4B211C310B00389965 /* StatisticsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
+		84747E4D211C34F100389965 /* AccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		84747E4E211C34F100389965 /* AccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
 		84D685B2211889AA003A9E90 /* tab_bar_oneday_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_bar_oneday_selected.png; sourceTree = "<group>"; };
 		84D685B4211889AB003A9E90 /* tab_bar_me_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_bar_me_selected.png; sourceTree = "<group>"; };
 		84D685B821188A7B003A9E90 /* tab_bar_oneday_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_bar_oneday_normal.png; sourceTree = "<group>"; };
@@ -220,6 +244,14 @@
 			children = (
 				845AB1182119D2FA002DE3FE /* AlbumViewController.h */,
 				845AB1192119D2FA002DE3FE /* AlbumViewController.m */,
+				84747E38211BEF4800389965 /* SleepViewController.h */,
+				84747E39211BEF4800389965 /* SleepViewController.m */,
+				84747E3B211BEF6E00389965 /* DietViewController.h */,
+				84747E3C211BEF6E00389965 /* DietViewController.m */,
+				84747E41211BEFA700389965 /* MangaViewController.h */,
+				84747E42211BEFA700389965 /* MangaViewController.m */,
+				84747E3E211BEF7D00389965 /* BookViewController.h */,
+				84747E3F211BEF7D00389965 /* BookViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -229,6 +261,14 @@
 			children = (
 				8449E16B211846A100DF4F21 /* MeViewController.h */,
 				8449E16E211846A100DF4F21 /* MeViewController.m */,
+				84747E44211C309100389965 /* UserInfoViewController.h */,
+				84747E45211C309100389965 /* UserInfoViewController.m */,
+				84747E4A211C310B00389965 /* StatisticsViewController.h */,
+				84747E4B211C310B00389965 /* StatisticsViewController.m */,
+				84747E4D211C34F100389965 /* AccountViewController.h */,
+				84747E4E211C34F100389965 /* AccountViewController.m */,
+				84747E47211C30C500389965 /* SettingViewController.h */,
+				84747E48211C30C500389965 /* SettingViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -369,15 +409,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84747E43211BEFA700389965 /* MangaViewController.m in Sources */,
+				84747E3A211BEF4800389965 /* SleepViewController.m in Sources */,
+				84747E49211C30C500389965 /* SettingViewController.m in Sources */,
+				84747E4C211C310B00389965 /* StatisticsViewController.m in Sources */,
 				8449E17D211846A100DF4F21 /* AppDelegate.m in Sources */,
+				84747E3D211BEF6E00389965 /* DietViewController.m in Sources */,
 				845AB1202119D6FF002DE3FE /* AlbumCell.m in Sources */,
 				845AB11D2119D43C002DE3FE /* BaseCollectionViewController.m in Sources */,
 				8449E181211846A100DF4F21 /* BaseViewController.m in Sources */,
 				845AB11A2119D2FA002DE3FE /* AlbumViewController.m in Sources */,
+				84747E4F211C34F100389965 /* AccountViewController.m in Sources */,
 				84F8223A210979C30006A913 /* main.m in Sources */,
 				8449E182211846A100DF4F21 /* BaseTabBarController.m in Sources */,
+				84747E40211BEF7D00389965 /* BookViewController.m in Sources */,
 				8449E17F211846A100DF4F21 /* OneDayViewController.m in Sources */,
 				84747E37211BE13200389965 /* Util.m in Sources */,
+				84747E46211C309100389965 /* UserInfoViewController.m in Sources */,
 				8449E17E211846A100DF4F21 /* MeViewController.m in Sources */,
 				84F36E7A2119856700C571C2 /* BaseTableViewController.m in Sources */,
 			);

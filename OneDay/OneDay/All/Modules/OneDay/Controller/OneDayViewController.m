@@ -7,6 +7,7 @@
 //
 
 #import "OneDayViewController.h"
+#import <WebKit/WebKit.h>
 
 @interface OneDayViewController ()
 
@@ -16,7 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
+    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) configuration:configuration];
+    [self.view addSubview:webView];
+    
+    NSString *string1 = @"https://tieba.baidu.com/f?kw=海贼王&fr=index";
+    NSString *string2 = [string1 stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet  URLQueryAllowedCharacterSet]];//对URL中的汉字进行处理
+    NSURL *url = [NSURL URLWithString:string2];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [webView loadRequest:request];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,23 +1,23 @@
 //
-//  BaseViewController.m
+//  SleepViewController.m
 //  OneDay
 //
-//  Created by admin on 2018/8/1.
+//  Created by admin on 2018/8/9.
 //  Copyright © 2018年 admin. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "SleepViewController.h"
 
-@interface BaseViewController ()
+@interface SleepViewController ()
 
 @end
 
-@implementation BaseViewController
+@implementation SleepViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"睡眠";
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,23 +1,23 @@
 //
-//  BaseViewController.m
+//  StatisticsViewController.m
 //  OneDay
 //
-//  Created by admin on 2018/8/1.
+//  Created by admin on 2018/8/9.
 //  Copyright © 2018年 admin. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "StatisticsViewController.h"
 
-@interface BaseViewController ()
+@interface StatisticsViewController ()
 
 @end
 
-@implementation BaseViewController
+@implementation StatisticsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"统计";
 }
 
 - (void)didReceiveMemoryWarning {

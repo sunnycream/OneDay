@@ -1,23 +1,23 @@
 //
-//  BaseViewController.m
+//  DietViewController.m
 //  OneDay
 //
-//  Created by admin on 2018/8/1.
+//  Created by admin on 2018/8/9.
 //  Copyright © 2018年 admin. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "DietViewController.h"
 
-@interface BaseViewController ()
+@interface DietViewController ()
 
 @end
 
-@implementation BaseViewController
+@implementation DietViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"饮食";
 }
 
 - (void)didReceiveMemoryWarning {

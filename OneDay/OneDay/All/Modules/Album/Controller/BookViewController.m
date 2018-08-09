@@ -1,23 +1,23 @@
 //
-//  BaseViewController.m
+//  BookViewController.m
 //  OneDay
 //
-//  Created by admin on 2018/8/1.
+//  Created by admin on 2018/8/9.
 //  Copyright © 2018年 admin. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "BookViewController.h"
 
-@interface BaseViewController ()
+@interface BookViewController ()
 
 @end
 
-@implementation BaseViewController
+@implementation BookViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"书";
 }
 
 - (void)didReceiveMemoryWarning {

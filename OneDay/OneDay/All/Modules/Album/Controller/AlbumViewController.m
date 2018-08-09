@@ -8,6 +8,10 @@
 
 #import "AlbumViewController.h"
 #import "AlbumCell.h"
+#import "SleepViewController.h"
+#import "DietViewController.h"
+#import "MangaViewController.h"
+#import "BookViewController.h"
 
 static NSString *cellID = @"cellID";
 @interface AlbumViewController ()
@@ -29,14 +33,6 @@ static NSString *cellID = @"cellID";
     [self.imageArray addObjectsFromArray:image];
 }
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
-}
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.dataArray.count;
-}
-
 - (UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     AlbumCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
 
@@ -47,6 +43,35 @@ static NSString *cellID = @"cellID";
     cell.albumName.text = [self.dataArray objectAtIndex:indexPath.item];
     
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.item) {
+        case 0:{//睡眠
+            SleepViewController *sleepVC = [[SleepViewController alloc] init];
+            sleepVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:sleepVC animated:YES];
+            break;
+        }
+        case 1:{//饮食
+            DietViewController *dietVC = [[DietViewController alloc] init];
+            dietVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:dietVC animated:YES];
+            break;
+        }
+        case 2:{//日漫
+            MangaViewController *mangaVC = [[MangaViewController alloc] init];
+            mangaVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:mangaVC animated:YES];
+            break;
+        }
+        case 3:{//书
+            BookViewController *bookVC = [[BookViewController alloc] init];
+            bookVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:bookVC animated:YES];
+            break;
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {

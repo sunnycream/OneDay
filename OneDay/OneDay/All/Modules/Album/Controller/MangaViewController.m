@@ -1,23 +1,23 @@
 //
-//  BaseViewController.m
+//  MangaViewController.m
 //  OneDay
 //
-//  Created by admin on 2018/8/1.
+//  Created by admin on 2018/8/9.
 //  Copyright © 2018年 admin. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "MangaViewController.h"
 
-@interface BaseViewController ()
+@interface MangaViewController ()
 
 @end
 
-@implementation BaseViewController
+@implementation MangaViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"日漫";
 }
 
 - (void)didReceiveMemoryWarning {

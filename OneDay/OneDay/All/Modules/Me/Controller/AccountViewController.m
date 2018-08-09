@@ -1,23 +1,23 @@
 //
-//  BaseViewController.m
+//  AccountViewController.m
 //  OneDay
 //
-//  Created by admin on 2018/8/1.
+//  Created by admin on 2018/8/9.
 //  Copyright © 2018年 admin. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "AccountViewController.h"
 
-@interface BaseViewController ()
+@interface AccountViewController ()
 
 @end
 
-@implementation BaseViewController
+@implementation AccountViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"账号";
 }
 
 - (void)didReceiveMemoryWarning {

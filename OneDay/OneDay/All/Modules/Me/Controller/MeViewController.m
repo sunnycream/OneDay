@@ -7,6 +7,10 @@
 //
 
 #import "MeViewController.h"
+#import "UserInfoViewController.h"
+#import "StatisticsViewController.h"
+#import "AccountViewController.h"
+#import "SettingViewController.h"
 
 static NSString *cellID = @"cellID";
 @interface MeViewController ()
@@ -37,11 +41,9 @@ static NSString *cellID = @"cellID";
     avatar.backgroundColor = [UIColor blackColor];
     [self.headerView addSubview:avatar];
     
-    [avatar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.headerView.mas_top).offset(20);
-        make.left.equalTo(self.headerView.mas_left).offset(20);
-        make.size.mas_offset(CGSizeMake(60, 60));
-    }];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(enterUserInfo:)];
+    avatar.userInteractionEnabled = YES;
+    [avatar addGestureRecognizer:tap];
     
     //昵称
     UILabel *nickname = [[UILabel alloc] init];
@@ -49,31 +51,46 @@ static NSString *cellID = @"cellID";
     nickname.font = [UIFont boldSystemFontOfSize:16];
     [self.headerView addSubview:nickname];
     
-    [nickname mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(avatar.mas_top).offset(5);
-        make.left.equalTo(avatar.mas_right).offset(10);
-        make.right.equalTo(self.headerView.mas_right).offset(-10);
-    }];
-    
     //简介
     UILabel *intro = [[UILabel alloc] init];
     intro.text = @"intro...";
     intro.font = [UIFont systemFontOfSize:14];
     [self.headerView addSubview:intro];
     
+    //二维码
+    UIImageView *QRcode = [[UIImageView alloc] init];
+    QRcode.backgroundColor = [UIColor grayColor];
+    [self.headerView addSubview:QRcode];
+    
+    [avatar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_offset(CGSizeMake(60, 60));
+        make.top.equalTo(self.headerView.mas_top).offset(20);
+        make.left.equalTo(self.headerView.mas_left).offset(20);
+    }];
+    
+    [nickname mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(avatar.mas_top).offset(5);
+        make.left.equalTo(avatar.mas_right).offset(10);
+        make.right.equalTo(QRcode.mas_left).offset(-10);
+    }];
+    
     [intro mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(nickname.mas_left);
         make.bottom.equalTo(avatar.mas_bottom).offset(-5);
-        make.right.equalTo(self.headerView.mas_right).offset(-10);
+        make.right.equalTo(QRcode.mas_left).offset(-10);
+    }];
+    
+    [QRcode mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_offset(CGSizeMake(50, 50));
+        make.right.equalTo(self.headerView.mas_right).offset(-20);
+        make.centerY.equalTo(self.headerView);
     }];
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dataArray.count;
+- (void)enterUserInfo:(UITapGestureRecognizer *)tap {
+    UserInfoViewController *userInfoVC = [[UserInfoViewController alloc] init];
+    userInfoVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:userInfoVC animated:YES];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -86,7 +103,32 @@ static NSString *cellID = @"cellID";
     return cell;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section; {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    switch (indexPath.row) {
+        case 0:{//统计
+            StatisticsViewController *statisticsVC = [[StatisticsViewController alloc] init];
+            statisticsVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:statisticsVC animated:YES];
+            break;
+        }
+        case 1:{//账户
+            AccountViewController *accountVC = [[AccountViewController alloc] init];
+            accountVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:accountVC animated:YES];
+            break;
+        }
+        case 2:{//设置
+            SettingViewController *settingVC = [[SettingViewController alloc] init];
+            settingVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:settingVC animated:YES];
+            break;
+        }
+    }
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *view = [[UIView alloc] init];
     
     return view;
