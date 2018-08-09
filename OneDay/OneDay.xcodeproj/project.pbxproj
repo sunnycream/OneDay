@@ -15,6 +15,7 @@
 		845AB11A2119D2FA002DE3FE /* AlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB1192119D2FA002DE3FE /* AlbumViewController.m */; };
 		845AB11D2119D43C002DE3FE /* BaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB11C2119D43C002DE3FE /* BaseCollectionViewController.m */; };
 		845AB1202119D6FF002DE3FE /* AlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB11F2119D6FF002DE3FE /* AlbumCell.m */; };
+		84747E37211BE13200389965 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 84747E36211BE13200389965 /* Util.m */; };
 		84D685B5211889AB003A9E90 /* tab_bar_oneday_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D685B2211889AA003A9E90 /* tab_bar_oneday_selected.png */; };
 		84D685B7211889AB003A9E90 /* tab_bar_me_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D685B4211889AB003A9E90 /* tab_bar_me_selected.png */; };
 		84D685B921188A7B003A9E90 /* tab_bar_oneday_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D685B821188A7B003A9E90 /* tab_bar_oneday_normal.png */; };
@@ -49,6 +50,8 @@
 		845AB11C2119D43C002DE3FE /* BaseCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCollectionViewController.m; sourceTree = "<group>"; };
 		845AB11E2119D6FF002DE3FE /* AlbumCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlbumCell.h; sourceTree = "<group>"; };
 		845AB11F2119D6FF002DE3FE /* AlbumCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumCell.m; sourceTree = "<group>"; };
+		84747E35211BE13200389965 /* Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		84747E36211BE13200389965 /* Util.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		84D685B2211889AA003A9E90 /* tab_bar_oneday_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_bar_oneday_selected.png; sourceTree = "<group>"; };
 		84D685B4211889AB003A9E90 /* tab_bar_me_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_bar_me_selected.png; sourceTree = "<group>"; };
 		84D685B821188A7B003A9E90 /* tab_bar_oneday_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_bar_oneday_normal.png; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 		8449E15D2118467F00DF4F21 /* All */ = {
 			isa = PBXGroup;
 			children = (
+				84747E34211BE10500389965 /* Util */,
 				8449E15E211846A100DF4F21 /* Resource */,
 				845AB1142119A0D0002DE3FE /* Config */,
 				8449E172211846A100DF4F21 /* Base */,
@@ -157,6 +161,15 @@
 				845AB1172119B86E002DE3FE /* Prefix.pch */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		84747E34211BE10500389965 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				84747E35211BE13200389965 /* Util.h */,
+				84747E36211BE13200389965 /* Util.m */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		84C5A6F0211A8B6600E96CAB /* OneDay */ = {
@@ -364,6 +377,7 @@
 				84F8223A210979C30006A913 /* main.m in Sources */,
 				8449E182211846A100DF4F21 /* BaseTabBarController.m in Sources */,
 				8449E17F211846A100DF4F21 /* OneDayViewController.m in Sources */,
+				84747E37211BE13200389965 /* Util.m in Sources */,
 				8449E17E211846A100DF4F21 /* MeViewController.m in Sources */,
 				84F36E7A2119856700C571C2 /* BaseTableViewController.m in Sources */,
 			);

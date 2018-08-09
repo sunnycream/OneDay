@@ -37,11 +37,23 @@ static NSString *cellID = @"cellID";
     avatar.backgroundColor = [UIColor blackColor];
     [self.headerView addSubview:avatar];
     
+    [avatar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.headerView.mas_top).offset(20);
+        make.left.equalTo(self.headerView.mas_left).offset(20);
+        make.size.mas_offset(CGSizeMake(60, 60));
+    }];
+    
     //昵称
     UILabel *nickname = [[UILabel alloc] init];
     nickname.text = @"nickname";
     nickname.font = [UIFont boldSystemFontOfSize:16];
     [self.headerView addSubview:nickname];
+    
+    [nickname mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(avatar.mas_top).offset(5);
+        make.left.equalTo(avatar.mas_right).offset(10);
+        make.right.equalTo(self.headerView.mas_right).offset(-10);
+    }];
     
     //简介
     UILabel *intro = [[UILabel alloc] init];
@@ -49,20 +61,10 @@ static NSString *cellID = @"cellID";
     intro.font = [UIFont systemFontOfSize:14];
     [self.headerView addSubview:intro];
     
-    [avatar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.headerView.mas_top).offset(20);
-        make.left.equalTo(self.headerView.mas_left).offset(20);
-        make.size.mas_offset(CGSizeMake(60, 60));
-    }];
-    
-    [nickname mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(avatar.mas_top).offset(5);
-        make.left.equalTo(avatar.mas_right).offset(10);
-    }];
-    
     [intro mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(nickname.mas_left);
         make.bottom.equalTo(avatar.mas_bottom).offset(-5);
+        make.right.equalTo(self.headerView.mas_right).offset(-10);
     }];
 }
 
@@ -85,10 +87,13 @@ static NSString *cellID = @"cellID";
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section; {
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 10)];
-    view.backgroundColor = [UIColor yellowColor];
-
+    UIView *view = [[UIView alloc] init];
+    
     return view;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 10.0f;
 }
 
 - (NSMutableArray *)imageArray {
@@ -101,7 +106,7 @@ static NSString *cellID = @"cellID";
 - (UIView *)headerView {
     if (!_headerView) {
         _headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 100)];
-        _headerView.backgroundColor = [UIColor greenColor];
+        _headerView.backgroundColor = [UIColor whiteColor];
     }
     return _headerView;
 }
