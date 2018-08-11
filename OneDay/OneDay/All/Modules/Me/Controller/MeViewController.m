@@ -12,7 +12,6 @@
 #import "AccountViewController.h"
 #import "SettingViewController.h"
 
-static NSString *cellID = @"cellID";
 @interface MeViewController ()
 
 @property (nonatomic, strong) NSMutableArray *imageArray;
@@ -25,7 +24,6 @@ static NSString *cellID = @"cellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
     [self.tableView setTableHeaderView:self.headerView];
     [self userInfo];
     
@@ -94,8 +92,12 @@ static NSString *cellID = @"cellID";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellID = @"cellID";
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (!cell) {
+        [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
+        cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     }
     cell.textLabel.text = [self.dataArray objectAtIndex:indexPath.row];
     cell.imageView.image = [UIImage imageNamed:[self.imageArray objectAtIndex:indexPath.row]];
