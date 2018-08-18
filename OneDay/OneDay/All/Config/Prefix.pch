@@ -9,8 +9,8 @@
 #ifndef Prefix_pch
 #define Prefix_pch
 
-#define kScreenWidth    [UIScreen mainScreen] .bounds.size.width
-#define kScreenHeight   [UIScreen mainScreen] .bounds.size.height
+#define kScreenWidth    [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight   [UIScreen mainScreen].bounds.size.height
 
 #define ScreenWidth     self.view.frame.size.width
 #define ScreenHeight    self.view.frame.size.height
