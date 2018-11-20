@@ -26,33 +26,30 @@
 
     [self.tableView setTableHeaderView:self.headerView];
     [self userInfo];
-    
-    NSArray *text = @[@"统计", @"账号", @"设置"];
-    NSArray *image = @[@"tab_bar_oneday_normal", @"tab_bar_album_normal", @"tab_bar_me_normal"];
-    [self.dataArray addObjectsFromArray:text];
-    [self.imageArray addObjectsFromArray:image];
+
+    [self.dataArray addObjectsFromArray:@[@"统计", @"账号", @"设置"]];
 }
 
 - (void)userInfo {
     //头像
     UIImageView *avatar = [[UIImageView alloc] init];
-    avatar.backgroundColor = [UIColor blackColor];
+    avatar.image = [UIImage imageNamed:@"avatar.jpg"];
     [self.headerView addSubview:avatar];
     
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(enterUserInfo:)];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(enterUserInfo)];
     avatar.userInteractionEnabled = YES;
     [avatar addGestureRecognizer:tap];
     
     //昵称
     UILabel *nickname = [[UILabel alloc] init];
-    nickname.text = @"nickname";
-    nickname.font = [UIFont boldSystemFontOfSize:16];
+    nickname.text = @"山水";
+    nickname.font = [UIFont boldSystemFontOfSize:BoldTextSize];
     [self.headerView addSubview:nickname];
     
     //简介
     UILabel *intro = [[UILabel alloc] init];
-    intro.text = @"intro...";
-    intro.font = [UIFont systemFontOfSize:14];
+    intro.text = @"黑色的风格";
+    intro.font = [UIFont systemFontOfSize:DefaultTextSize];
     [self.headerView addSubview:intro];
     
     //二维码
@@ -85,7 +82,7 @@
     }];
 }
 
-- (void)enterUserInfo:(UITapGestureRecognizer *)tap {
+- (void)enterUserInfo {
     UserInfoViewController *userInfoVC = [[UserInfoViewController alloc] init];
     userInfoVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:userInfoVC animated:YES];
@@ -142,7 +139,7 @@
 
 - (NSMutableArray *)imageArray {
     if (!_imageArray) {
-        _imageArray = [NSMutableArray array];
+        _imageArray = [NSMutableArray arrayWithArray:@[@"tab_bar_oneday_normal", @"tab_bar_album_normal", @"tab_bar_me_normal"]];
     }
     return _imageArray;
 }

@@ -8,7 +8,6 @@
 
 #import "BaseCollectionViewController.h"
 
-static NSString *cellID = @"cellID";
 @interface BaseCollectionViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @end
@@ -17,9 +16,6 @@ static NSString *cellID = @"cellID";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    //注册
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cellID];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -32,20 +28,21 @@ static NSString *cellID = @"cellID";
 }
 
 - (UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    static NSString *cellID = @"cellID";
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
-    
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cellID];
+
     return cell;
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
     CGFloat width = (kScreenWidth - 10 * 3) / 2;
+
     return CGSizeMake(width, width + 20);
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    
     return UIEdgeInsetsMake(10, 10, 10, 10);
 }
 
@@ -53,7 +50,7 @@ static NSString *cellID = @"cellID";
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) collectionViewLayout:self.layout];
-        _collectionView.backgroundColor = [Util colorWithHexString:@"#F3F3F3"];
+        _collectionView.backgroundColor = [Util colorWithHexString:kBackgroundColor];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         [self.view addSubview:_collectionView];

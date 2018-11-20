@@ -23,7 +23,10 @@
     [self.view addSubview:webView];
     
     NSString *string1 = @"https://tieba.baidu.com/f?kw=海贼王&fr=index";
-    NSString *string2 = [string1 stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet  URLQueryAllowedCharacterSet]];//对URL中的汉字进行处理
+
+    //对URL中的汉字进行处理
+    NSString *string2 = [string1 stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet  URLQueryAllowedCharacterSet]];
+
     NSURL *url = [NSURL URLWithString:string2];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [webView loadRequest:request];

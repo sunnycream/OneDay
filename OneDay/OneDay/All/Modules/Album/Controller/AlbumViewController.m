@@ -27,10 +27,7 @@ static NSString *cellID = @"cellID";
     
     [self.collectionView registerClass:[AlbumCell class] forCellWithReuseIdentifier:cellID];
     
-    NSArray *text = @[@"睡眠", @"饮食", @"日漫", @"书"];
-    NSArray *image = @[@"tab_bar_oneday_normal", @"tab_bar_album_normal", @"tab_bar_me_normal", @"tab_bar_me_normal"];
-    [self.dataArray addObjectsFromArray:text];
-    [self.imageArray addObjectsFromArray:image];
+    [self.dataArray addObjectsFromArray:@[@"睡眠", @"饮食", @"日漫", @"书"]];
 }
 
 - (UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -39,7 +36,6 @@ static NSString *cellID = @"cellID";
     cell.albumImage.backgroundColor = [UIColor blackColor];
     cell.albumName.backgroundColor = [UIColor yellowColor];
     
-    cell.albumImage.image = [UIImage imageNamed:[self.imageArray objectAtIndex:indexPath.item]];
     cell.albumName.text = [self.dataArray objectAtIndex:indexPath.item];
     
     return cell;
@@ -71,6 +67,8 @@ static NSString *cellID = @"cellID";
             [self.navigationController pushViewController:bookVC animated:YES];
             break;
         }
+        default:
+            break;
     }
 }
 
