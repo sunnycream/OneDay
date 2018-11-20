@@ -19,15 +19,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    
+
     BaseTabBarController *baseTabBarVC = [[BaseTabBarController alloc] init];
     self.window.rootViewController = baseTabBarVC;
     
     [self.window makeKeyAndVisible];
-    
+
+//    [[UMSocialManager defaultManager] setUmSocialAppkey:UMengKey];
+    //    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:@"" appSecret:@"" redirectURL:@""];
+//    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"" appSecret:@"" redirectURL:@""];
+//    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:SinaAppKey appSecret:SinaAppSecret redirectURL:nil];
+
     return YES;
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -11,7 +11,9 @@
 
 @interface Util : NSObject
 
-/* 十六进制颜色 */
+/**
+    十六进制颜色
+ */
 + (UIColor *)colorWithHexString:(NSString *)color;
 
 @end

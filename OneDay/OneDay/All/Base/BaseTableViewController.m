@@ -8,7 +8,6 @@
 
 #import "BaseTableViewController.h"
 
-static NSString *cellID = @"cellID";
 @interface BaseTableViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @end
@@ -17,8 +16,6 @@ static NSString *cellID = @"cellID";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
 }
 
 #pragma mark - UITableViewDataSource
@@ -31,7 +28,9 @@ static NSString *cellID = @"cellID";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellID = @"cellID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
 
     return cell;
 }
@@ -45,7 +44,7 @@ static NSString *cellID = @"cellID";
 - (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) style:UITableViewStylePlain];
-        _tableView.backgroundColor = [Util colorWithHexString:@"#F3F3F3"];
+        _tableView.backgroundColor = [Util colorWithHexString:kBackgroundColor];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.rowHeight = 50;

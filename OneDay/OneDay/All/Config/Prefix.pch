@@ -15,12 +15,26 @@
 #define ScreenWidth     self.view.frame.size.width
 #define ScreenHeight    self.view.frame.size.height
 
+/**
+    UITableView、UICollectionView 背景色
+ */
+#define kBackgroundColor @"F3F3F3"
+
+#define UMengKey @"5beb8e7ef1f556bf990001a2"
+//#define WeChatAppKey
+//#define WeChatAppSecret
+//#define QQAppKey
+//#define QQAppSecret
+#define SinaAppKey @"654330455"
+#define SinaAppSecret @"f923937022a4304b2c1fbe052e99fc50"
+
+#define DefaultTextSize 14.0f
+#define BoldTextSize    16.0f
+
 #import "Util.h"
 
 //Third Party
 #import <Masonry/Masonry.h>
-
-
-
+//#import <UMSocialCore/UMSocialCore.h>
 
 #endif /* Prefix_pch */
