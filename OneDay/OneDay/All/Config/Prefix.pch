@@ -32,6 +32,7 @@
 #define BoldTextSize    16.0f
 
 #import "Util.h"
+#import "UIBarButtonItem+SCBarButtonItem.h"
 
 //Third Party
 #import <Masonry/Masonry.h>

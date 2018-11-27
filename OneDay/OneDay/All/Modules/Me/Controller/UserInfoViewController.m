@@ -7,6 +7,10 @@
 //
 
 #import "UserInfoViewController.h"
+#import "UserAvatarViewController.h"
+#import "UserNicknameViewController.h"
+#import "UserQRCodeViewController.h"
+#import "UserSignatureViewController.h"
 
 @interface UserInfoViewController ()
 
@@ -18,6 +22,54 @@
     [super viewDidLoad];
     
     self.title = @"个人信息";
+
+    [self.dataArray addObjectsFromArray:@[@"头像", @"昵称", @"二维码", @"个性签名"]];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellID = @"cellID";
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (!cell) {
+        [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
+        cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    }
+    cell.textLabel.text = [self.dataArray objectAtIndex:indexPath.row];
+
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+    switch (indexPath.row) {
+        case 0:{//头像
+            UserAvatarViewController *avatarVC = [[UserAvatarViewController alloc] init];
+            avatarVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:avatarVC animated:YES];
+            break;
+        }
+        case 1:{//昵称
+            UserNicknameViewController *nicknameVC = [[UserNicknameViewController alloc] init];
+            nicknameVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:nicknameVC animated:YES];
+            break;
+        }
+        case 2:{//二维码
+            UserQRCodeViewController *QRCodeVC = [[UserQRCodeViewController alloc] init];
+            QRCodeVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:QRCodeVC animated:YES];
+            break;
+        }
+        case 3:{//个性签名
+            UserSignatureViewController *signatureVC = [[UserSignatureViewController alloc] init];
+            signatureVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:signatureVC animated:YES];
+            break;
+        }
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

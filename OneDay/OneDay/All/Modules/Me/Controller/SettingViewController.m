@@ -8,7 +8,6 @@
 
 #import "SettingViewController.h"
 
-//static NSString *cellID = @"cellID";
 @interface SettingViewController ()
 
 @end
@@ -21,8 +20,7 @@
     self.title = @"设置";
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) style:UITableViewStyleGrouped];
-//    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
-    
+
     NSArray *array = @[@[@"免打扰模式", @"夜间模式"],
                        @[@"清除缓存"],
                        @[@"退出"]];
@@ -40,12 +38,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellID = @"cellID";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    if (!cellID) {
-        [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
-        cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    }
+
+    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+
     cell.textLabel.text =  self.dataArray[indexPath.section][indexPath.row];
     
     return cell;

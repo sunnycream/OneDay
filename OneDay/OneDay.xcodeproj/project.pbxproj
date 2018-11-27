@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8401789121A4FD6200BBF45F /* UserAvatarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401789021A4FD6200BBF45F /* UserAvatarViewController.m */; };
+		8401789421A4FD8000BBF45F /* UserNicknameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401789321A4FD8000BBF45F /* UserNicknameViewController.m */; };
+		8401789721A4FD8D00BBF45F /* UserQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401789621A4FD8D00BBF45F /* UserQRCodeViewController.m */; };
+		8401789A21A4FDAB00BBF45F /* UserSignatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401789921A4FDAB00BBF45F /* UserSignatureViewController.m */; };
+		8401789E21A5327600BBF45F /* UIBarButtonItem+SCBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401789D21A5327600BBF45F /* UIBarButtonItem+SCBarButtonItem.m */; };
 		8449E17D211846A100DF4F21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449E168211846A100DF4F21 /* AppDelegate.m */; };
 		8449E17E211846A100DF4F21 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449E16E211846A100DF4F21 /* MeViewController.m */; };
 		8449E17F211846A100DF4F21 /* OneDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449E16F211846A100DF4F21 /* OneDayViewController.m */; };
@@ -50,6 +55,16 @@
 		3381E7E8FF389BAAA29D9148 /* Pods-OneDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneDay.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneDay/Pods-OneDay.release.xcconfig"; sourceTree = "<group>"; };
 		41724F5F221B7D44F0E33FA4 /* libPods-OneDay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneDay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A77CFD7D77D502523D69500 /* Pods-OneDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneDay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneDay/Pods-OneDay.debug.xcconfig"; sourceTree = "<group>"; };
+		8401788F21A4FD6200BBF45F /* UserAvatarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserAvatarViewController.h; sourceTree = "<group>"; };
+		8401789021A4FD6200BBF45F /* UserAvatarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserAvatarViewController.m; sourceTree = "<group>"; };
+		8401789221A4FD8000BBF45F /* UserNicknameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserNicknameViewController.h; sourceTree = "<group>"; };
+		8401789321A4FD8000BBF45F /* UserNicknameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserNicknameViewController.m; sourceTree = "<group>"; };
+		8401789521A4FD8D00BBF45F /* UserQRCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserQRCodeViewController.h; sourceTree = "<group>"; };
+		8401789621A4FD8D00BBF45F /* UserQRCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserQRCodeViewController.m; sourceTree = "<group>"; };
+		8401789821A4FDAB00BBF45F /* UserSignatureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserSignatureViewController.h; sourceTree = "<group>"; };
+		8401789921A4FDAB00BBF45F /* UserSignatureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserSignatureViewController.m; sourceTree = "<group>"; };
+		8401789C21A5327600BBF45F /* UIBarButtonItem+SCBarButtonItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+SCBarButtonItem.h"; sourceTree = "<group>"; };
+		8401789D21A5327600BBF45F /* UIBarButtonItem+SCBarButtonItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+SCBarButtonItem.m"; sourceTree = "<group>"; };
 		8449E167211846A100DF4F21 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8449E168211846A100DF4F21 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8449E16B211846A100DF4F21 /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
@@ -130,9 +145,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8401789B21A5321E00BBF45F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8401789C21A5327600BBF45F /* UIBarButtonItem+SCBarButtonItem.h */,
+				8401789D21A5327600BBF45F /* UIBarButtonItem+SCBarButtonItem.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		8449E15D2118467F00DF4F21 /* All */ = {
 			isa = PBXGroup;
 			children = (
+				8401789B21A5321E00BBF45F /* Extension */,
 				84747E34211BE10500389965 /* Util */,
 				8449E15E211846A100DF4F21 /* Resource */,
 				845AB1142119A0D0002DE3FE /* Config */,
@@ -285,6 +310,14 @@
 				8449E16E211846A100DF4F21 /* MeViewController.m */,
 				84747E44211C309100389965 /* UserInfoViewController.h */,
 				84747E45211C309100389965 /* UserInfoViewController.m */,
+				8401788F21A4FD6200BBF45F /* UserAvatarViewController.h */,
+				8401789021A4FD6200BBF45F /* UserAvatarViewController.m */,
+				8401789221A4FD8000BBF45F /* UserNicknameViewController.h */,
+				8401789321A4FD8000BBF45F /* UserNicknameViewController.m */,
+				8401789521A4FD8D00BBF45F /* UserQRCodeViewController.h */,
+				8401789621A4FD8D00BBF45F /* UserQRCodeViewController.m */,
+				8401789821A4FDAB00BBF45F /* UserSignatureViewController.h */,
+				8401789921A4FDAB00BBF45F /* UserSignatureViewController.m */,
 				84747E4A211C310B00389965 /* StatisticsViewController.h */,
 				84747E4B211C310B00389965 /* StatisticsViewController.m */,
 				84747E4D211C34F100389965 /* AccountViewController.h */,
@@ -477,15 +510,20 @@
 				84D2A379219BFC4500932FDE /* LoginViewController.m in Sources */,
 				8449E17D211846A100DF4F21 /* AppDelegate.m in Sources */,
 				84747E3D211BEF6E00389965 /* DietViewController.m in Sources */,
+				8401789E21A5327600BBF45F /* UIBarButtonItem+SCBarButtonItem.m in Sources */,
 				845AB1202119D6FF002DE3FE /* AlbumCell.m in Sources */,
 				845AB11D2119D43C002DE3FE /* BaseCollectionViewController.m in Sources */,
 				8449E181211846A100DF4F21 /* BaseViewController.m in Sources */,
+				8401789721A4FD8D00BBF45F /* UserQRCodeViewController.m in Sources */,
 				845AB11A2119D2FA002DE3FE /* AlbumViewController.m in Sources */,
+				8401789121A4FD6200BBF45F /* UserAvatarViewController.m in Sources */,
 				84747E4F211C34F100389965 /* AccountViewController.m in Sources */,
 				84F8223A210979C30006A913 /* main.m in Sources */,
 				8449E182211846A100DF4F21 /* BaseTabBarController.m in Sources */,
+				8401789A21A4FDAB00BBF45F /* UserSignatureViewController.m in Sources */,
 				84747E40211BEF7D00389965 /* BookViewController.m in Sources */,
 				8449E17F211846A100DF4F21 /* OneDayViewController.m in Sources */,
+				8401789421A4FD8000BBF45F /* UserNicknameViewController.m in Sources */,
 				84747E37211BE13200389965 /* Util.m in Sources */,
 				84747E46211C309100389965 /* UserInfoViewController.m in Sources */,
 				8449E17E211846A100DF4F21 /* MeViewController.m in Sources */,

@@ -124,6 +124,8 @@
             [self.navigationController pushViewController:settingVC animated:YES];
             break;
         }
+        default:
+            break;
     }
 }
 

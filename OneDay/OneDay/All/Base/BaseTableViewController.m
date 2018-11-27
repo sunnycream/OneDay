@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [self.view addSubview:self.tableView];
 }
 
 #pragma mark - UITableViewDataSource
@@ -50,7 +52,7 @@
         _tableView.rowHeight = 50;
         _tableView.tableFooterView = [[UIView alloc] init];
 //        _tableView.separatorInset = UIEdgeInsetsZero;
-        [self.view addSubview:_tableView];
+//        [self.view addSubview:_tableView];
     }
     return _tableView;
 }
