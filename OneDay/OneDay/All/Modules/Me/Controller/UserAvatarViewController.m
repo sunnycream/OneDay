@@ -14,7 +14,7 @@
 @interface UserAvatarViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (nonatomic, strong) UIImagePickerController *imagePickerController;
-@property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) UIImageView *avatar;
 
 @end
 
@@ -25,9 +25,9 @@
 
     self.title = @"个人头像";
 
-    self.imageView.backgroundColor = [UIColor yellowColor];
+    self.avatar.image = [UIImage imageNamed:@"avatar.jpg"];
 
-    UIBarButtonItem *rightBarItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"login_wechat"] target:self action:@selector(rightButtonAction)];
+    UIBarButtonItem *rightBarItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"more"] target:self action:@selector(rightButtonAction)];
     self.navigationItem.rightBarButtonItem = rightBarItem;
 }
 
@@ -60,7 +60,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info {
     [picker dismissViewControllerAnimated:YES completion:nil];
     UIImage *image = [info valueForKey:UIImagePickerControllerEditedImage];
-    self.imageView.image = image;
+    self.avatar.image = image;
 }
 
 #pragma mark - Camera
@@ -147,17 +147,17 @@
     return _imagePickerController;
 }
 
-- (UIImageView *)imageView {
-    if (!_imageView) {
-        _imageView = [[UIImageView alloc] init];
-        [self.view addSubview:_imageView];
+- (UIImageView *)avatar {
+    if (!_avatar) {
+        _avatar = [[UIImageView alloc] init];
+        [self.view addSubview:_avatar];
 
-        [_imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        [_avatar mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(200, 200));
             make.center.equalTo(self.view);
         }];
     }
-    return _imageView;
+    return _avatar;
 }
 
 /*

@@ -24,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.tableView.bounces = NO;
     [self.tableView setTableHeaderView:self.headerView];
     [self userInfo];
 
@@ -54,9 +55,9 @@
     
     //二维码
     UIImageView *QRcode = [[UIImageView alloc] init];
-    QRcode.backgroundColor = [UIColor grayColor];
+    QRcode.image = [UIImage imageNamed:@"qr_code"];
     [self.headerView addSubview:QRcode];
-    
+
     [avatar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_offset(CGSizeMake(60, 60));
         make.top.equalTo(self.headerView.mas_top).offset(20);
@@ -76,7 +77,7 @@
     }];
     
     [QRcode mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_offset(CGSizeMake(50, 50));
+        make.size.mas_offset(CGSizeMake(25, 25));
         make.right.equalTo(self.headerView.mas_right).offset(-20);
         make.centerY.equalTo(self.headerView);
     }];
