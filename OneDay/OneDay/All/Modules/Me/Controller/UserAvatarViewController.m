@@ -43,6 +43,7 @@
         [self checkAlbumPermission];
     }];
     UIAlertAction *save = [UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UIImageWriteToSavedPhotosAlbum(self.avatar.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
     }];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
         [self dismissViewControllerAnimated:YES completion:nil];
@@ -54,6 +55,14 @@
     [alert addAction:cancel];
 
     [self presentViewController:alert animated:YES completion:nil];
+}
+
+#pragma mark - 保存图片
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    NSLog(@"保存成功");
+    if (error) {
+        NSLog(@"the error is: %@", error);
+    }
 }
 
 #pragma mark - UIImagePickerControllerDelegate
