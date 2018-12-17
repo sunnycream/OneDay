@@ -16,9 +16,9 @@
 #define ScreenHeight    self.view.frame.size.height
 
 /**
-    UITableView、UICollectionView 背景色
+    背景色
  */
-#define kBackgroundColor @"F3F3F3"
+#define kBackgroundColor [Util colorWithHexString:@"#F5F5F5"]
 
 #define UMengKey @"5beb8e7ef1f556bf990001a2"
 //#define WeChatAppKey

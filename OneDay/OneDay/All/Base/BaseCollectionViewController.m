@@ -50,7 +50,7 @@
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) collectionViewLayout:self.layout];
-        _collectionView.backgroundColor = [Util colorWithHexString:kBackgroundColor];
+        _collectionView.backgroundColor = kBackgroundColor;
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         [self.view addSubview:_collectionView];

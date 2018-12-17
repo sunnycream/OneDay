@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [Util colorWithHexString:@"#F5F5F5"];
+    self.view.backgroundColor = kBackgroundColor;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -46,7 +46,7 @@
 - (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) style:UITableViewStylePlain];
-        _tableView.backgroundColor = [Util colorWithHexString:kBackgroundColor];
+        _tableView.backgroundColor = kBackgroundColor;
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.rowHeight = 50;
