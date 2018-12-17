@@ -27,7 +27,7 @@
 
     self.textView.backgroundColor = [UIColor whiteColor];
     self.placeholder.textColor = [Util colorWithHexString:@"#D3D3D3"];
-    self.textCount.textColor = [Util colorWithHexString:@"#D3D3D3"];
+    self.textCount.textColor = [UIColor whiteColor];
     self.textCount.text = [NSString stringWithFormat:@"%lu/%d", (unsigned long)self.textView.text.length, kMaxLength];
 }
 
@@ -37,6 +37,8 @@
     } else {
         self.placeholder.hidden = YES;
     }
+
+    self.textCount.text = [NSString stringWithFormat:@"%lu/%d", (unsigned long)textView.text.length, kMaxLength];
 
     NSString *toBeString = textView.text;
     NSString *lang = [[UIApplication sharedApplication] textInputMode].primaryLanguage;//键盘输入模式
@@ -65,7 +67,8 @@
         _textView = [[UITextView alloc] init];
         _textView.delegate = self;
         _textView.font = [UIFont systemFontOfSize:DefaultTextSize];
-        _textView.tintColor = [UIColor blackColor];
+        _textView.tintColor = [Util colorWithHexString:@"#6495ED"];
+        _textView.textContainerInset = UIEdgeInsetsMake(11, 0, 0, 0);
         [self.view addSubview:_textView];
 
         [_textView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -97,14 +100,18 @@
 - (UILabel *)textCount {
     if (!_textCount) {
         _textCount = [[UILabel alloc] init];
-        _textCount.backgroundColor = [UIColor redColor];
+        _textCount.backgroundColor = [Util colorWithHexString:@"#6495ED"];
         _textCount.font = [UIFont systemFontOfSize:DefaultTextSize];
         [self.textView addSubview:_textCount];
 
+#warning constraints
         [_textCount mas_makeConstraints:^(MASConstraintMaker *make) {
             make.height.mas_equalTo(30);
-            make.bottom.equalTo(self.textView.mas_bottom).offset(-5);
-            make.right.equalTo(self.textView.mas_right).offset(-5);
+//            make.bottom.equalTo(self.textView.mas_bottom).offset(-5);
+//            make.right.equalTo(self.textView.mas_right).offset(-5);
+
+            make.top.equalTo(self.textView.mas_top).offset(50);
+            make.left.equalTo(self.textView.mas_left).offset(kScreenWidth - 60);
         }];
     }
     return _textCount;
