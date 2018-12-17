@@ -22,14 +22,22 @@
     
     [self addChildControllers];
     
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor grayColor], NSFontAttributeName:[UIFont fontWithName:@"Marion-Italic" size:12.0]} forState:UIControlStateNormal];
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor], NSFontAttributeName:[UIFont fontWithName:@"Marion-Italic" size:12.0]} forState:UIControlStateSelected];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:kTabBarNormalColor, NSFontAttributeName:[UIFont fontWithName:@"Marion-Italic" size:TabBarTextSize]} forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:kTabBarSelectedColor, NSFontAttributeName:[UIFont fontWithName:@"Marion-Italic" size:TabBarTextSize]} forState:UIControlStateSelected];
 }
 
 - (void)addChildControllers {
-    [self setChildControllers:[[OneDayViewController alloc] init] title:@"一天" normalImage:[[UIImage imageNamed:@"tab_bar_oneday_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tab_bar_oneday_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    [self setChildControllers:[[AlbumViewController alloc] init] title:@"相册" normalImage:[[UIImage imageNamed:@"tab_bar_album_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tab_bar_album_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    [self setChildControllers:[[MeViewController alloc] init] title:@"我" normalImage:[[UIImage imageNamed:@"tab_bar_me_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tab_bar_me_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [self setChildControllers:[[OneDayViewController alloc] init] title:@"一天"
+                  normalImage:[[UIImage imageNamed:@"tab_bar_oneday_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                selectedImage:[[UIImage imageNamed:@"tab_bar_oneday_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+
+    [self setChildControllers:[[AlbumViewController alloc] init] title:@"相册"
+                  normalImage:[[UIImage imageNamed:@"tab_bar_album_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                selectedImage:[[UIImage imageNamed:@"tab_bar_album_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+
+    [self setChildControllers:[[MeViewController alloc] init] title:@"我"
+                  normalImage:[[UIImage imageNamed:@"tab_bar_me_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                selectedImage:[[UIImage imageNamed:@"tab_bar_me_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 }
 
 - (void)setChildControllers:(UIViewController *)viewController title:(NSString *)title normalImage:(UIImage *)normalImage selectedImage:(UIImage *)selectedImage {
