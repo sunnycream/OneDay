@@ -11,6 +11,7 @@
 #import "UserNicknameViewController.h"
 #import "UserQRCodeViewController.h"
 #import "UserSignatureViewController.h"
+#import "BirthdayViewController.h"
 
 @interface UserInfoViewController ()
 
@@ -23,7 +24,7 @@
     
     self.title = @"个人信息";
 
-    [self.dataArray addObjectsFromArray:@[@"头像", @"昵称", @"二维码", @"个性签名"]];
+    [self.dataArray addObjectsFromArray:@[@"头像", @"昵称", @"二维码", @"个性签名", @"生辰"]];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -65,6 +66,12 @@
             UserSignatureViewController *signatureVC = [[UserSignatureViewController alloc] init];
             signatureVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:signatureVC animated:YES];
+            break;
+        }
+        case 4:{//生辰
+            BirthdayViewController *birthdayVC = [[BirthdayViewController alloc] init];
+            birthdayVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:birthdayVC animated:YES];
             break;
         }
         default:

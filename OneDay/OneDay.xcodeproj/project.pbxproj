@@ -29,6 +29,7 @@
 		84747E49211C30C500389965 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84747E48211C30C500389965 /* SettingViewController.m */; };
 		84747E4C211C310B00389965 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84747E4B211C310B00389965 /* StatisticsViewController.m */; };
 		84747E4F211C34F100389965 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84747E4E211C34F100389965 /* AccountViewController.m */; };
+		84C64C4821DDB18700B69D56 /* BirthdayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C64C4721DDB18700B69D56 /* BirthdayViewController.m */; };
 		84D2A379219BFC4500932FDE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2A377219BFC4500932FDE /* LoginViewController.m */; };
 		84D2A37A219BFC4500932FDE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2A378219BFC4500932FDE /* LoginViewController.xib */; };
 		84D2A392219BFFE800932FDE /* login_qq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D2A38C219BFFE700932FDE /* login_qq@2x.png */; };
@@ -104,6 +105,8 @@
 		84747E4B211C310B00389965 /* StatisticsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
 		84747E4D211C34F100389965 /* AccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
 		84747E4E211C34F100389965 /* AccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		84C64C4621DDB18700B69D56 /* BirthdayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BirthdayViewController.h; sourceTree = "<group>"; };
+		84C64C4721DDB18700B69D56 /* BirthdayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BirthdayViewController.m; sourceTree = "<group>"; };
 		84D2A376219BFC4500932FDE /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		84D2A377219BFC4500932FDE /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		84D2A378219BFC4500932FDE /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -327,6 +330,8 @@
 				8401789621A4FD8D00BBF45F /* UserQRCodeViewController.m */,
 				8401789821A4FDAB00BBF45F /* UserSignatureViewController.h */,
 				8401789921A4FDAB00BBF45F /* UserSignatureViewController.m */,
+				84C64C4621DDB18700B69D56 /* BirthdayViewController.h */,
+				84C64C4721DDB18700B69D56 /* BirthdayViewController.m */,
 				84747E4A211C310B00389965 /* StatisticsViewController.h */,
 				84747E4B211C310B00389965 /* StatisticsViewController.m */,
 				84747E4D211C34F100389965 /* AccountViewController.h */,
@@ -546,6 +551,7 @@
 				8449E182211846A100DF4F21 /* BaseTabBarController.m in Sources */,
 				8401789A21A4FDAB00BBF45F /* UserSignatureViewController.m in Sources */,
 				84747E40211BEF7D00389965 /* BookViewController.m in Sources */,
+				84C64C4821DDB18700B69D56 /* BirthdayViewController.m in Sources */,
 				8449E17F211846A100DF4F21 /* OneDayViewController.m in Sources */,
 				8401789421A4FD8000BBF45F /* UserNicknameViewController.m in Sources */,
 				84747E37211BE13200389965 /* Util.m in Sources */,

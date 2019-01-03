@@ -22,6 +22,11 @@
     self.title = @"设置昵称";
 
     self.textField.backgroundColor = [UIColor whiteColor];
+
+
+
+
+
 }
 
 - (void)changeNickname:(UITextField *)textField {
