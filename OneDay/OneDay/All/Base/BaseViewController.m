@@ -16,8 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.view.backgroundColor = kBackgroundColor;
+
+    self.view.backgroundColor = kThemeBackgroundColor;
 }
 
 - (void)didReceiveMemoryWarning {

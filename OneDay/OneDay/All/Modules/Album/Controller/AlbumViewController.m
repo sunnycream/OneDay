@@ -25,7 +25,7 @@
     [super viewDidLoad];
 
     //先调用下collectionView
-    self.collectionView.backgroundColor = kBackgroundColor;
+    self.collectionView.backgroundColor = kThemeBackgroundColor;
 
     [self.dataArray addObjectsFromArray:@[@"睡眠", @"饮食", @"日漫", @"书"]];
 }

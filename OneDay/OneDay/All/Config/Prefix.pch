@@ -18,9 +18,9 @@
 /**
     背景色
  */
-#define kBackgroundColor      [Util colorWithHexString:@"#F5F5F5"]
-#define kTabBarNormalColor    [Util colorWithHexString:@"#D3D3D3"]
-#define kTabBarSelectedColor  [Util colorWithHexString:@"#808080"]
+#define kThemeBackgroundColor       [Util colorWithHexString:@"#F5F5F5"]
+#define kTabBarNormalColor          [Util colorWithHexString:@"#D3D3D3"]
+#define kTabBarSelectedColor        [Util colorWithHexString:@"#808080"]
 
 #define UMengKey @"5beb8e7ef1f556bf990001a2"
 //#define WeChatAppKey
