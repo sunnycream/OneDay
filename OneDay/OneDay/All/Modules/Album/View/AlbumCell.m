@@ -18,7 +18,7 @@
         
         self.albumName = [[UILabel alloc] init];
         self.albumName.textAlignment = NSTextAlignmentCenter;
-        self.albumName.font = [UIFont systemFontOfSize:DefaultTextSize];
+        self.albumName.font = [UIFont systemFontOfSize:kDefaultTextSize];
         [self.contentView addSubview:self.albumName];
         
         [self setupConstraint];

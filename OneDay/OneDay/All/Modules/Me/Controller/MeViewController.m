@@ -7,6 +7,7 @@
 //
 
 #import "MeViewController.h"
+#import "MeCell.h"
 #import "UserInfoViewController.h"
 #import "StatisticsViewController.h"
 #import "AccountViewController.h"
@@ -34,7 +35,7 @@
 - (void)userInfo {
     //头像
     UIImageView *avatar = [[UIImageView alloc] init];
-    avatar.image = [UIImage imageNamed:@"avatar.jpg"];
+    avatar.image = [UIImage imageNamed:@"avatar"];
     [self.headerView addSubview:avatar];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(enterUserInfo)];
@@ -44,13 +45,13 @@
     //昵称
     UILabel *nickname = [[UILabel alloc] init];
     nickname.text = @"山水";
-    nickname.font = [UIFont boldSystemFontOfSize:BoldTextSize];
+    nickname.font = [UIFont boldSystemFontOfSize:kBoldTextSize];
     [self.headerView addSubview:nickname];
     
     //简介
     UILabel *intro = [[UILabel alloc] init];
     intro.text = @"黑色的风格";
-    intro.font = [UIFont systemFontOfSize:DefaultTextSize];
+    intro.font = [UIFont systemFontOfSize:kDefaultTextSize];
     [self.headerView addSubview:intro];
     
     //二维码
@@ -92,12 +93,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellID = @"cellID";
 
-    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+    [tableView registerClass:[MeCell class] forCellReuseIdentifier:cellID];
+    MeCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
 
-    cell.textLabel.text = [self.dataArray objectAtIndex:indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:[self.imageArray objectAtIndex:indexPath.row]];
-    
+    cell.icon.image = [UIImage imageNamed:[self.imageArray objectAtIndex:indexPath.row]];
+    cell.title.text = [self.dataArray objectAtIndex:indexPath.row];
+
     return cell;
 }
 
@@ -140,7 +141,7 @@
 
 - (NSMutableArray *)imageArray {
     if (!_imageArray) {
-        _imageArray = [NSMutableArray arrayWithArray:@[@"tab_bar_oneday_normal", @"tab_bar_album_normal", @"tab_bar_me_normal"]];
+        _imageArray = [NSMutableArray arrayWithArray:@[@"me_statistical", @"me_account", @"me_setting"]];
     }
     return _imageArray;
 }

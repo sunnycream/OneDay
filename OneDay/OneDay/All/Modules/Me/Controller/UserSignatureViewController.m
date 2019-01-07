@@ -66,7 +66,7 @@
     if (!_textView) {
         _textView = [[UITextView alloc] init];
         _textView.delegate = self;
-        _textView.font = [UIFont systemFontOfSize:DefaultTextSize];
+        _textView.font = [UIFont systemFontOfSize:kDefaultTextSize];
         _textView.tintColor = [Util colorWithHexString:@"#6495ED"];
         _textView.textContainerInset = UIEdgeInsetsMake(11, 0, 0, 0);
         [self.view addSubview:_textView];
@@ -85,7 +85,7 @@
     if (!_placeholder) {
         _placeholder = [[UILabel alloc] init];
         _placeholder.text = @"输入个性签名";
-        _placeholder.font = [UIFont systemFontOfSize:DefaultTextSize];
+        _placeholder.font = [UIFont systemFontOfSize:kDefaultTextSize];
         [self.textView addSubview:_placeholder];
 
         [_placeholder mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -101,7 +101,7 @@
     if (!_textCount) {
         _textCount = [[UILabel alloc] init];
         _textCount.backgroundColor = [Util colorWithHexString:@"#6495ED"];
-        _textCount.font = [UIFont systemFontOfSize:DefaultTextSize];
+        _textCount.font = [UIFont systemFontOfSize:kDefaultTextSize];
         [self.textView addSubview:_textCount];
 
 #warning constraints

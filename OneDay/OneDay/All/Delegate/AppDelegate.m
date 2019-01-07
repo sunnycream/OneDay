@@ -19,6 +19,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
+    //导航栏背景色
+    [[UINavigationBar appearance] setBarTintColor:kBarSelectedColor];
+    //导航栏标题颜色及大小
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kBarNormalColor, NSForegroundColorAttributeName, [UIFont boldSystemFontOfSize:kNavgationBarTextSize], NSFontAttributeName,nil]];
+    //返回按钮
+    [[UINavigationBar appearance] setTintColor:kBarNormalColor];
+    [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"nav_back"]];
+    [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"nav_back"]];
+
     BaseTabBarController *baseTabBarVC = [[BaseTabBarController alloc] init];
     self.window.rootViewController = baseTabBarVC;
     

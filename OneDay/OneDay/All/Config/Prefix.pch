@@ -15,12 +15,9 @@
 #define ScreenWidth     self.view.frame.size.width
 #define ScreenHeight    self.view.frame.size.height
 
-/**
-    背景色
- */
 #define kThemeBackgroundColor       [Util colorWithHexString:@"#F5F5F5"]
-#define kTabBarNormalColor          [Util colorWithHexString:@"#D3D3D3"]
-#define kTabBarSelectedColor        [Util colorWithHexString:@"#808080"]
+#define kBarNormalColor             [Util colorWithHexString:@"#000000"]
+#define kBarSelectedColor           [Util colorWithHexString:@"#FF69B4"]
 
 #define UMengKey @"5beb8e7ef1f556bf990001a2"
 //#define WeChatAppKey
@@ -30,9 +27,10 @@
 #define SinaAppKey @"654330455"
 #define SinaAppSecret @"f923937022a4304b2c1fbe052e99fc50"
 
-#define TabBarTextSize  12.0f
-#define DefaultTextSize 14.0f
-#define BoldTextSize    16.0f
+#define kNavgationBarTextSize   18.0f
+#define kTabBarTextSize         12.0f
+#define kDefaultTextSize        14.0f
+#define kBoldTextSize           16.0f
 
 #import "Util.h"
 #import "UIBarButtonItem+SCBarButtonItem.h"

@@ -56,7 +56,7 @@
         _textField = [[UITextField alloc] init];
         _textField.delegate = self;
         _textField.placeholder = @"输入昵称";
-        _textField.font = [UIFont systemFontOfSize:DefaultTextSize];
+        _textField.font = [UIFont systemFontOfSize:kDefaultTextSize];
         _textField.tintColor = [Util colorWithHexString:@"#6495ED"];//光标颜色
 
         //左边距
