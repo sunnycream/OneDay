@@ -48,25 +48,21 @@
     switch (indexPath.item) {
         case 0:{//睡眠
             SleepViewController *sleepVC = [[SleepViewController alloc] init];
-            sleepVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:sleepVC animated:YES];
             break;
         }
         case 1:{//饮食
             DietViewController *dietVC = [[DietViewController alloc] init];
-            dietVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:dietVC animated:YES];
             break;
         }
         case 2:{//日漫
             MangaViewController *mangaVC = [[MangaViewController alloc] init];
-            mangaVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:mangaVC animated:YES];
             break;
         }
         case 3:{//书
             BookViewController *bookVC = [[BookViewController alloc] init];
-            bookVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:bookVC animated:YES];
             break;
         }

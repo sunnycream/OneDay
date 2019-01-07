@@ -57,6 +57,7 @@
 		84C5331921E348B400E9B909 /* login_sina@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C5331321E348B300E9B909 /* login_sina@2x.png */; };
 		84C5331A21E348B400E9B909 /* login_qq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C5331421E348B300E9B909 /* login_qq@2x.png */; };
 		84C5331B21E348B400E9B909 /* login_wechat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C5331521E348B400E9B909 /* login_wechat@2x.png */; };
+		84C5331E21E3515000E9B909 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C5331D21E3515000E9B909 /* BaseNavigationController.m */; };
 		84C64C4821DDB18700B69D56 /* BirthdayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C64C4721DDB18700B69D56 /* BirthdayViewController.m */; };
 		84D2A379219BFC4500932FDE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2A377219BFC4500932FDE /* LoginViewController.m */; };
 		84D2A37A219BFC4500932FDE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2A378219BFC4500932FDE /* LoginViewController.xib */; };
@@ -149,6 +150,8 @@
 		84C5331321E348B300E9B909 /* login_sina@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_sina@2x.png"; sourceTree = "<group>"; };
 		84C5331421E348B300E9B909 /* login_qq@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_qq@2x.png"; sourceTree = "<group>"; };
 		84C5331521E348B400E9B909 /* login_wechat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_wechat@2x.png"; sourceTree = "<group>"; };
+		84C5331C21E3515000E9B909 /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		84C5331D21E3515000E9B909 /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		84C64C4621DDB18700B69D56 /* BirthdayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BirthdayViewController.h; sourceTree = "<group>"; };
 		84C64C4721DDB18700B69D56 /* BirthdayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BirthdayViewController.m; sourceTree = "<group>"; };
 		84D2A376219BFC4500932FDE /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -272,6 +275,8 @@
 				845AB11C2119D43C002DE3FE /* BaseCollectionViewController.m */,
 				8449E174211846A100DF4F21 /* BaseTabBarController.h */,
 				8449E175211846A100DF4F21 /* BaseTabBarController.m */,
+				84C5331C21E3515000E9B909 /* BaseNavigationController.h */,
+				84C5331D21E3515000E9B909 /* BaseNavigationController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -617,6 +622,7 @@
 				8449E17D211846A100DF4F21 /* AppDelegate.m in Sources */,
 				84747E3D211BEF6E00389965 /* DietViewController.m in Sources */,
 				8401789E21A5327600BBF45F /* UIBarButtonItem+SCBarButtonItem.m in Sources */,
+				84C5331E21E3515000E9B909 /* BaseNavigationController.m in Sources */,
 				845AB1202119D6FF002DE3FE /* NightCell.m in Sources */,
 				845AB11D2119D43C002DE3FE /* BaseCollectionViewController.m in Sources */,
 				8449E181211846A100DF4F21 /* BaseViewController.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "BaseTabBarController.h"
+#import "BaseNavigationController.h"
 #import "DayViewController.h"
 #import "NightViewController.h"
 #import "MeViewController.h"
@@ -41,7 +42,9 @@
 }
 
 - (void)setChildControllers:(UIViewController *)viewController title:(NSString *)title normalImage:(UIImage *)normalImage selectedImage:(UIImage *)selectedImage {
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewController];
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewController];
+    BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:viewController];
+
     nav.tabBarItem.title = title;
     nav.tabBarItem.image = normalImage;
     nav.tabBarItem.selectedImage = selectedImage;

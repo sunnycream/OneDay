@@ -45,31 +45,26 @@
     switch (indexPath.row) {
         case 0:{//头像
             UserAvatarViewController *avatarVC = [[UserAvatarViewController alloc] init];
-            avatarVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:avatarVC animated:YES];
             break;
         }
         case 1:{//昵称
             UserNicknameViewController *nicknameVC = [[UserNicknameViewController alloc] init];
-            nicknameVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:nicknameVC animated:YES];
             break;
         }
         case 2:{//二维码
             UserQRCodeViewController *QRCodeVC = [[UserQRCodeViewController alloc] init];
-            QRCodeVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:QRCodeVC animated:YES];
             break;
         }
         case 3:{//个性签名
             UserSignatureViewController *signatureVC = [[UserSignatureViewController alloc] init];
-            signatureVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:signatureVC animated:YES];
             break;
         }
         case 4:{//生辰
             BirthdayViewController *birthdayVC = [[BirthdayViewController alloc] init];
-            birthdayVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:birthdayVC animated:YES];
             break;
         }

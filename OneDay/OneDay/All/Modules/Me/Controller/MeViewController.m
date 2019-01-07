@@ -27,12 +27,12 @@
 
     self.tableView.bounces = NO;
     [self.tableView setTableHeaderView:self.headerView];
-    [self userInfo];
+    [self setupUserInfo];
 
     [self.dataArray addObjectsFromArray:@[@"统计", @"账号", @"设置"]];
 }
 
-- (void)userInfo {
+- (void)setupUserInfo {
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(enterUserInfo)];
     self.headerView.userInteractionEnabled = YES;
     [self.headerView addGestureRecognizer:tap];
@@ -86,7 +86,6 @@
 
 - (void)enterUserInfo {
     UserInfoViewController *userInfoVC = [[UserInfoViewController alloc] init];
-    userInfoVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:userInfoVC animated:YES];
 }
 
@@ -108,19 +107,16 @@
     switch (indexPath.row) {
         case 0:{//统计
             StatisticsViewController *statisticsVC = [[StatisticsViewController alloc] init];
-            statisticsVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:statisticsVC animated:YES];
             break;
         }
         case 1:{//账户
             AccountViewController *accountVC = [[AccountViewController alloc] init];
-            accountVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:accountVC animated:YES];
             break;
         }
         case 2:{//设置
             SettingViewController *settingVC = [[SettingViewController alloc] init];
-            settingVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:settingVC animated:YES];
             break;
         }
