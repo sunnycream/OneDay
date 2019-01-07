@@ -25,10 +25,18 @@
 
     self.title = @"个人头像";
 
-    self.avatar.image = [UIImage imageNamed:@"avatar.jpg"];
+    self.avatar.image = [UIImage imageNamed:@"avatar"];
 
-    UIBarButtonItem *rightBarItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"more"] target:self action:@selector(rightButtonAction)];
+    UIBarButtonItem *rightBarItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"nav_more"] target:self action:@selector(rightButtonAction)];
     self.navigationItem.rightBarButtonItem = rightBarItem;
+
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressAvatar)];
+    self.avatar.userInteractionEnabled = YES;
+    [self.avatar addGestureRecognizer:longPress];
+}
+
+- (void)longPressAvatar {
+    [self rightButtonAction];
 }
 
 - (void)rightButtonAction {
@@ -159,6 +167,7 @@
 - (UIImageView *)avatar {
     if (!_avatar) {
         _avatar = [[UIImageView alloc] init];
+        _avatar.contentMode = UIViewContentModeScaleAspectFit;
         [self.view addSubview:_avatar];
 
         [_avatar mas_makeConstraints:^(MASConstraintMaker *make) {

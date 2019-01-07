@@ -100,7 +100,8 @@
 - (UILabel *)textCount {
     if (!_textCount) {
         _textCount = [[UILabel alloc] init];
-        _textCount.backgroundColor = [Util colorWithHexString:@"#6495ED"];
+//        _textCount.backgroundColor = [Util colorWithHexString:@"#6495ED"];
+        _textCount.backgroundColor = kBarSelectedColor;
         _textCount.font = [UIFont systemFontOfSize:kDefaultTextSize];
         [self.textView addSubview:_textCount];
 
