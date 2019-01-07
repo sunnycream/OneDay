@@ -1,25 +1,25 @@
 //
-//  AlbumViewController.m
+//  NightViewController.m
 //  OneDay
 //
 //  Created by admin on 2018/8/7.
 //  Copyright © 2018年 admin. All rights reserved.
 //
 
-#import "AlbumViewController.h"
-#import "AlbumCell.h"
+#import "NightViewController.h"
+#import "NightCell.h"
 #import "SleepViewController.h"
 #import "DietViewController.h"
 #import "MangaViewController.h"
 #import "BookViewController.h"
 
-@interface AlbumViewController ()
+@interface NightViewController ()
 
 @property (nonatomic, strong) NSMutableArray *imageArray;
 
 @end
 
-@implementation AlbumViewController
+@implementation NightViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,13 +33,13 @@
 - (UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     static NSString *cellID = @"cellID";
 
-    [collectionView registerClass:[AlbumCell class] forCellWithReuseIdentifier:cellID];
-    AlbumCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
+    [collectionView registerClass:[NightCell class] forCellWithReuseIdentifier:cellID];
+    NightCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
 
-    cell.albumImage.backgroundColor = [UIColor blackColor];
-    cell.albumName.backgroundColor = [UIColor yellowColor];
+    cell.icon.backgroundColor = [UIColor blackColor];
+    cell.title.backgroundColor = [UIColor yellowColor];
     
-    cell.albumName.text = [self.dataArray objectAtIndex:indexPath.item];
+    cell.title.text = [self.dataArray objectAtIndex:indexPath.item];
     
     return cell;
 }

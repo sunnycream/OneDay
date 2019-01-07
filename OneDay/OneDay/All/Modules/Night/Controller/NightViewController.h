@@ -1,5 +1,5 @@
 //
-//  AlbumViewController.h
+//  NightViewController.h
 //  OneDay
 //
 //  Created by admin on 2018/8/7.
@@ -8,6 +8,6 @@
 
 #import "BaseCollectionViewController.h"
 
-@interface AlbumViewController : BaseCollectionViewController
+@interface NightViewController : BaseCollectionViewController
 
 @end

@@ -1,19 +1,19 @@
 //
-//  OneDayViewController.m
+//  DayViewController.m
 //  OneDay
 //
 //  Created by admin on 2018/8/1.
 //  Copyright © 2018年 admin. All rights reserved.
 //
 
-#import "OneDayViewController.h"
+#import "DayViewController.h"
 #import <WebKit/WebKit.h>
 
-@interface OneDayViewController ()
+@interface DayViewController ()
 
 @end
 
-@implementation OneDayViewController
+@implementation DayViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

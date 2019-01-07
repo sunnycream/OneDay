@@ -33,15 +33,15 @@
 }
 
 - (void)userInfo {
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(enterUserInfo)];
+    self.headerView.userInteractionEnabled = YES;
+    [self.headerView addGestureRecognizer:tap];
+
     //头像
     UIImageView *avatar = [[UIImageView alloc] init];
     avatar.image = [UIImage imageNamed:@"avatar"];
     [self.headerView addSubview:avatar];
-    
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(enterUserInfo)];
-    avatar.userInteractionEnabled = YES;
-    [avatar addGestureRecognizer:tap];
-    
+
     //昵称
     UILabel *nickname = [[UILabel alloc] init];
     nickname.text = @"山水";

@@ -1,5 +1,5 @@
 //
-//  OneDayViewController.h
+//  DayViewController.h
 //  OneDay
 //
 //  Created by admin on 2018/8/1.
@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface OneDayViewController : BaseViewController
+@interface DayViewController : BaseViewController
 
 @end

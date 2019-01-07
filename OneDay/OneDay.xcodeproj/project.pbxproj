@@ -14,12 +14,12 @@
 		8401789E21A5327600BBF45F /* UIBarButtonItem+SCBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401789D21A5327600BBF45F /* UIBarButtonItem+SCBarButtonItem.m */; };
 		8449E17D211846A100DF4F21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449E168211846A100DF4F21 /* AppDelegate.m */; };
 		8449E17E211846A100DF4F21 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449E16E211846A100DF4F21 /* MeViewController.m */; };
-		8449E17F211846A100DF4F21 /* OneDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449E16F211846A100DF4F21 /* OneDayViewController.m */; };
+		8449E17F211846A100DF4F21 /* DayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449E16F211846A100DF4F21 /* DayViewController.m */; };
 		8449E181211846A100DF4F21 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449E173211846A100DF4F21 /* BaseViewController.m */; };
 		8449E182211846A100DF4F21 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449E175211846A100DF4F21 /* BaseTabBarController.m */; };
-		845AB11A2119D2FA002DE3FE /* AlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB1192119D2FA002DE3FE /* AlbumViewController.m */; };
+		845AB11A2119D2FA002DE3FE /* NightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB1192119D2FA002DE3FE /* NightViewController.m */; };
 		845AB11D2119D43C002DE3FE /* BaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB11C2119D43C002DE3FE /* BaseCollectionViewController.m */; };
-		845AB1202119D6FF002DE3FE /* AlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB11F2119D6FF002DE3FE /* AlbumCell.m */; };
+		845AB1202119D6FF002DE3FE /* NightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 845AB11F2119D6FF002DE3FE /* NightCell.m */; };
 		84747E37211BE13200389965 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 84747E36211BE13200389965 /* Util.m */; };
 		84747E3A211BEF4800389965 /* SleepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84747E39211BEF4800389965 /* SleepViewController.m */; };
 		84747E3D211BEF6E00389965 /* DietViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84747E3C211BEF6E00389965 /* DietViewController.m */; };
@@ -88,20 +88,20 @@
 		8449E167211846A100DF4F21 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8449E168211846A100DF4F21 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8449E16B211846A100DF4F21 /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
-		8449E16C211846A100DF4F21 /* OneDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneDayViewController.h; sourceTree = "<group>"; };
+		8449E16C211846A100DF4F21 /* DayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayViewController.h; sourceTree = "<group>"; };
 		8449E16E211846A100DF4F21 /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
-		8449E16F211846A100DF4F21 /* OneDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneDayViewController.m; sourceTree = "<group>"; };
+		8449E16F211846A100DF4F21 /* DayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayViewController.m; sourceTree = "<group>"; };
 		8449E173211846A100DF4F21 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		8449E174211846A100DF4F21 /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
 		8449E175211846A100DF4F21 /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
 		8449E176211846A100DF4F21 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		845AB1172119B86E002DE3FE /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
-		845AB1182119D2FA002DE3FE /* AlbumViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlbumViewController.h; sourceTree = "<group>"; };
-		845AB1192119D2FA002DE3FE /* AlbumViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumViewController.m; sourceTree = "<group>"; };
+		845AB1182119D2FA002DE3FE /* NightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NightViewController.h; sourceTree = "<group>"; };
+		845AB1192119D2FA002DE3FE /* NightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NightViewController.m; sourceTree = "<group>"; };
 		845AB11B2119D43C002DE3FE /* BaseCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCollectionViewController.h; sourceTree = "<group>"; };
 		845AB11C2119D43C002DE3FE /* BaseCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCollectionViewController.m; sourceTree = "<group>"; };
-		845AB11E2119D6FF002DE3FE /* AlbumCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlbumCell.h; sourceTree = "<group>"; };
-		845AB11F2119D6FF002DE3FE /* AlbumCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumCell.m; sourceTree = "<group>"; };
+		845AB11E2119D6FF002DE3FE /* NightCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NightCell.h; sourceTree = "<group>"; };
+		845AB11F2119D6FF002DE3FE /* NightCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NightCell.m; sourceTree = "<group>"; };
 		84747E35211BE13200389965 /* Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		84747E36211BE13200389965 /* Util.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		84747E38211BEF4800389965 /* SleepViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SleepViewController.h; sourceTree = "<group>"; };
@@ -199,12 +199,12 @@
 		8449E15D2118467F00DF4F21 /* All */ = {
 			isa = PBXGroup;
 			children = (
+				8449E15E211846A100DF4F21 /* Resource */,
+				8449E166211846A100DF4F21 /* Delegate */,
+				8449E172211846A100DF4F21 /* Base */,
 				8401789B21A5321E00BBF45F /* Extension */,
 				84747E34211BE10500389965 /* Util */,
-				8449E15E211846A100DF4F21 /* Resource */,
 				845AB1142119A0D0002DE3FE /* Config */,
-				8449E172211846A100DF4F21 /* Base */,
-				8449E166211846A100DF4F21 /* Delegate */,
 				8449E169211846A100DF4F21 /* Modules */,
 			);
 			path = All;
@@ -254,8 +254,8 @@
 			isa = PBXGroup;
 			children = (
 				84D2A372219BD35E00932FDE /* Login */,
-				84C5A6F0211A8B6600E96CAB /* OneDay */,
-				84C5A6F2211A8B7D00E96CAB /* Album */,
+				84C5A6F0211A8B6600E96CAB /* Day */,
+				84C5A6F2211A8B7D00E96CAB /* Night */,
 				84C5A6F1211A8B7700E96CAB /* Me */,
 			);
 			path = Modules;
@@ -311,12 +311,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		84C5A6F0211A8B6600E96CAB /* OneDay */ = {
+		84C5A6F0211A8B6600E96CAB /* Day */ = {
 			isa = PBXGroup;
 			children = (
 				84C5A6F3211A8B8F00E96CAB /* Controller */,
 			);
-			path = OneDay;
+			path = Day;
 			sourceTree = "<group>";
 		};
 		84C5A6F1211A8B7700E96CAB /* Me */ = {
@@ -328,20 +328,20 @@
 			path = Me;
 			sourceTree = "<group>";
 		};
-		84C5A6F2211A8B7D00E96CAB /* Album */ = {
+		84C5A6F2211A8B7D00E96CAB /* Night */ = {
 			isa = PBXGroup;
 			children = (
 				84C5A6F5211A8BAB00E96CAB /* Controller */,
 				84C5A6F4211A8BA600E96CAB /* View */,
 			);
-			path = Album;
+			path = Night;
 			sourceTree = "<group>";
 		};
 		84C5A6F3211A8B8F00E96CAB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8449E16C211846A100DF4F21 /* OneDayViewController.h */,
-				8449E16F211846A100DF4F21 /* OneDayViewController.m */,
+				8449E16C211846A100DF4F21 /* DayViewController.h */,
+				8449E16F211846A100DF4F21 /* DayViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -349,8 +349,8 @@
 		84C5A6F4211A8BA600E96CAB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				845AB11E2119D6FF002DE3FE /* AlbumCell.h */,
-				845AB11F2119D6FF002DE3FE /* AlbumCell.m */,
+				845AB11E2119D6FF002DE3FE /* NightCell.h */,
+				845AB11F2119D6FF002DE3FE /* NightCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -358,8 +358,8 @@
 		84C5A6F5211A8BAB00E96CAB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				845AB1182119D2FA002DE3FE /* AlbumViewController.h */,
-				845AB1192119D2FA002DE3FE /* AlbumViewController.m */,
+				845AB1182119D2FA002DE3FE /* NightViewController.h */,
+				845AB1192119D2FA002DE3FE /* NightViewController.m */,
 				84747E38211BEF4800389965 /* SleepViewController.h */,
 				84747E39211BEF4800389965 /* SleepViewController.m */,
 				84747E3B211BEF6E00389965 /* DietViewController.h */,
@@ -617,11 +617,11 @@
 				8449E17D211846A100DF4F21 /* AppDelegate.m in Sources */,
 				84747E3D211BEF6E00389965 /* DietViewController.m in Sources */,
 				8401789E21A5327600BBF45F /* UIBarButtonItem+SCBarButtonItem.m in Sources */,
-				845AB1202119D6FF002DE3FE /* AlbumCell.m in Sources */,
+				845AB1202119D6FF002DE3FE /* NightCell.m in Sources */,
 				845AB11D2119D43C002DE3FE /* BaseCollectionViewController.m in Sources */,
 				8449E181211846A100DF4F21 /* BaseViewController.m in Sources */,
 				8401789721A4FD8D00BBF45F /* UserQRCodeViewController.m in Sources */,
-				845AB11A2119D2FA002DE3FE /* AlbumViewController.m in Sources */,
+				845AB11A2119D2FA002DE3FE /* NightViewController.m in Sources */,
 				8401789121A4FD6200BBF45F /* UserAvatarViewController.m in Sources */,
 				84C5330F21E33E3500E9B909 /* MeCell.m in Sources */,
 				84747E4F211C34F100389965 /* AccountViewController.m in Sources */,
@@ -630,7 +630,7 @@
 				8401789A21A4FDAB00BBF45F /* UserSignatureViewController.m in Sources */,
 				84747E40211BEF7D00389965 /* BookViewController.m in Sources */,
 				84C64C4821DDB18700B69D56 /* BirthdayViewController.m in Sources */,
-				8449E17F211846A100DF4F21 /* OneDayViewController.m in Sources */,
+				8449E17F211846A100DF4F21 /* DayViewController.m in Sources */,
 				8401789421A4FD8000BBF45F /* UserNicknameViewController.m in Sources */,
 				84747E37211BE13200389965 /* Util.m in Sources */,
 				84747E46211C309100389965 /* UserInfoViewController.m in Sources */,

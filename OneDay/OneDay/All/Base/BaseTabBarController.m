@@ -7,8 +7,8 @@
 //
 
 #import "BaseTabBarController.h"
-#import "OneDayViewController.h"
-#import "AlbumViewController.h"
+#import "DayViewController.h"
+#import "NightViewController.h"
 #import "MeViewController.h"
 
 @interface BaseTabBarController ()
@@ -27,11 +27,11 @@
 }
 
 - (void)addChildControllers {
-    [self setChildControllers:[[OneDayViewController alloc] init] title:@"Day"
+    [self setChildControllers:[[DayViewController alloc] init] title:@"Day"
                   normalImage:[[UIImage imageNamed:@"tab_bar_day_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
                 selectedImage:[[UIImage imageNamed:@"tab_bar_day_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 
-    [self setChildControllers:[[AlbumViewController alloc] init] title:@"Night"
+    [self setChildControllers:[[NightViewController alloc] init] title:@"Night"
                   normalImage:[[UIImage imageNamed:@"tab_bar_night_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
                 selectedImage:[[UIImage imageNamed:@"tab_bar_night_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 

@@ -43,6 +43,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
 
     cell.textLabel.text =  self.dataArray[indexPath.section][indexPath.row];
+    cell.textLabel.font = [UIFont systemFontOfSize:kDefaultTextSize];
     
     return cell;
 }
