@@ -51,15 +51,15 @@
 		84C5330A21E33D6700E9B909 /* me_statistical@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C5330821E33D6700E9B909 /* me_statistical@2x.png */; };
 		84C5330B21E33D6700E9B909 /* me_statistical@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C5330921E33D6700E9B909 /* me_statistical@3x.png */; };
 		84C5330F21E33E3500E9B909 /* MeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C5330E21E33E3500E9B909 /* MeCell.m */; };
+		84C5331621E348B400E9B909 /* login_qq@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C5331021E348B300E9B909 /* login_qq@3x.png */; };
+		84C5331721E348B400E9B909 /* login_wechat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C5331121E348B300E9B909 /* login_wechat@3x.png */; };
+		84C5331821E348B400E9B909 /* login_sina@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C5331221E348B300E9B909 /* login_sina@3x.png */; };
+		84C5331921E348B400E9B909 /* login_sina@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C5331321E348B300E9B909 /* login_sina@2x.png */; };
+		84C5331A21E348B400E9B909 /* login_qq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C5331421E348B300E9B909 /* login_qq@2x.png */; };
+		84C5331B21E348B400E9B909 /* login_wechat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C5331521E348B400E9B909 /* login_wechat@2x.png */; };
 		84C64C4821DDB18700B69D56 /* BirthdayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C64C4721DDB18700B69D56 /* BirthdayViewController.m */; };
 		84D2A379219BFC4500932FDE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2A377219BFC4500932FDE /* LoginViewController.m */; };
 		84D2A37A219BFC4500932FDE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2A378219BFC4500932FDE /* LoginViewController.xib */; };
-		84D2A392219BFFE800932FDE /* login_qq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D2A38C219BFFE700932FDE /* login_qq@2x.png */; };
-		84D2A393219BFFE800932FDE /* login_wechat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D2A38D219BFFE700932FDE /* login_wechat@2x.png */; };
-		84D2A394219BFFE800932FDE /* login_sina@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D2A38E219BFFE700932FDE /* login_sina@3x.png */; };
-		84D2A395219BFFE800932FDE /* login_sina@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D2A38F219BFFE800932FDE /* login_sina@2x.png */; };
-		84D2A396219BFFE800932FDE /* login_qq@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D2A390219BFFE800932FDE /* login_qq@3x.png */; };
-		84D2A397219BFFE800932FDE /* login_wechat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D2A391219BFFE800932FDE /* login_wechat@3x.png */; };
 		84F36E7A2119856700C571C2 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F36E792119856700C571C2 /* BaseTableViewController.m */; };
 		84F6473A21AF887E003CE863 /* qr_code@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F6473821AF887E003CE863 /* qr_code@2x.png */; };
 		84F6473B21AF887E003CE863 /* qr_code@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F6473921AF887E003CE863 /* qr_code@3x.png */; };
@@ -143,17 +143,17 @@
 		84C5330921E33D6700E9B909 /* me_statistical@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "me_statistical@3x.png"; sourceTree = "<group>"; };
 		84C5330D21E33E3500E9B909 /* MeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeCell.h; sourceTree = "<group>"; };
 		84C5330E21E33E3500E9B909 /* MeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeCell.m; sourceTree = "<group>"; };
+		84C5331021E348B300E9B909 /* login_qq@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_qq@3x.png"; sourceTree = "<group>"; };
+		84C5331121E348B300E9B909 /* login_wechat@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_wechat@3x.png"; sourceTree = "<group>"; };
+		84C5331221E348B300E9B909 /* login_sina@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_sina@3x.png"; sourceTree = "<group>"; };
+		84C5331321E348B300E9B909 /* login_sina@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_sina@2x.png"; sourceTree = "<group>"; };
+		84C5331421E348B300E9B909 /* login_qq@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_qq@2x.png"; sourceTree = "<group>"; };
+		84C5331521E348B400E9B909 /* login_wechat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_wechat@2x.png"; sourceTree = "<group>"; };
 		84C64C4621DDB18700B69D56 /* BirthdayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BirthdayViewController.h; sourceTree = "<group>"; };
 		84C64C4721DDB18700B69D56 /* BirthdayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BirthdayViewController.m; sourceTree = "<group>"; };
 		84D2A376219BFC4500932FDE /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		84D2A377219BFC4500932FDE /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		84D2A378219BFC4500932FDE /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		84D2A38C219BFFE700932FDE /* login_qq@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_qq@2x.png"; sourceTree = "<group>"; };
-		84D2A38D219BFFE700932FDE /* login_wechat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_wechat@2x.png"; sourceTree = "<group>"; };
-		84D2A38E219BFFE700932FDE /* login_sina@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_sina@3x.png"; sourceTree = "<group>"; };
-		84D2A38F219BFFE800932FDE /* login_sina@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_sina@2x.png"; sourceTree = "<group>"; };
-		84D2A390219BFFE800932FDE /* login_qq@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_qq@3x.png"; sourceTree = "<group>"; };
-		84D2A391219BFFE800932FDE /* login_wechat@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_wechat@3x.png"; sourceTree = "<group>"; };
 		84F36E782119856700C571C2 /* BaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
 		84F36E792119856700C571C2 /* BaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		84F6473821AF887E003CE863 /* qr_code@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qr_code@2x.png"; sourceTree = "<group>"; };
@@ -412,12 +412,12 @@
 		84D2A37B219BFDF400932FDE /* login */ = {
 			isa = PBXGroup;
 			children = (
-				84D2A38C219BFFE700932FDE /* login_qq@2x.png */,
-				84D2A390219BFFE800932FDE /* login_qq@3x.png */,
-				84D2A38F219BFFE800932FDE /* login_sina@2x.png */,
-				84D2A38E219BFFE700932FDE /* login_sina@3x.png */,
-				84D2A38D219BFFE700932FDE /* login_wechat@2x.png */,
-				84D2A391219BFFE800932FDE /* login_wechat@3x.png */,
+				84C5331421E348B300E9B909 /* login_qq@2x.png */,
+				84C5331021E348B300E9B909 /* login_qq@3x.png */,
+				84C5331321E348B300E9B909 /* login_sina@2x.png */,
+				84C5331221E348B300E9B909 /* login_sina@3x.png */,
+				84C5331521E348B400E9B909 /* login_wechat@2x.png */,
+				84C5331121E348B300E9B909 /* login_wechat@3x.png */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -544,37 +544,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C5331B21E348B400E9B909 /* login_wechat@2x.png in Resources */,
 				84F82237210979C30006A913 /* LaunchScreen.storyboard in Resources */,
-				84D2A394219BFFE800932FDE /* login_sina@3x.png in Resources */,
 				84F6473E21AF8A71003CE863 /* more@3x.png in Resources */,
 				84C532C821E32B7100E9B909 /* nav_back@2x.png in Resources */,
 				84C532F221E338BB00E9B909 /* me_setting@3x.png in Resources */,
-				84D2A396219BFFE800932FDE /* login_qq@3x.png in Resources */,
 				84C532D621E3307000E9B909 /* tab_bar_me_normal@2x.png in Resources */,
 				84F82234210979C30006A913 /* Assets.xcassets in Resources */,
 				84C532E021E3335C00E9B909 /* tab_bar_day_normal@2x.png in Resources */,
-				84D2A395219BFFE800932FDE /* login_sina@2x.png in Resources */,
 				84C532E121E3335C00E9B909 /* tab_bar_day_selected@3x.png in Resources */,
 				84C532C921E32B7100E9B909 /* nav_back@3x.png in Resources */,
 				84C532D721E3307000E9B909 /* tab_bar_me_normal@3x.png in Resources */,
 				84C5330B21E33D6700E9B909 /* me_statistical@3x.png in Resources */,
+				84C5331721E348B400E9B909 /* login_wechat@3x.png in Resources */,
 				84C532F121E338BB00E9B909 /* me_setting@2x.png in Resources */,
 				84F6473B21AF887E003CE863 /* qr_code@3x.png in Resources */,
 				84C532E921E3336300E9B909 /* tab_bar_night_selected@2x.png in Resources */,
 				84C532E621E3336300E9B909 /* tab_bar_night_selected@3x.png in Resources */,
 				84C532E821E3336300E9B909 /* tab_bar_night_normal@3x.png in Resources */,
+				84C5331921E348B400E9B909 /* login_sina@2x.png in Resources */,
 				84C532DF21E3335C00E9B909 /* tab_bar_day_selected@2x.png in Resources */,
-				84D2A393219BFFE800932FDE /* login_wechat@2x.png in Resources */,
 				84C5330A21E33D6700E9B909 /* me_statistical@2x.png in Resources */,
-				84D2A397219BFFE800932FDE /* login_wechat@3x.png in Resources */,
 				84C532E721E3336300E9B909 /* tab_bar_night_normal@2x.png in Resources */,
 				84F6473A21AF887E003CE863 /* qr_code@2x.png in Resources */,
 				84C532DE21E3335C00E9B909 /* tab_bar_day_normal@3x.png in Resources */,
-				84D2A392219BFFE800932FDE /* login_qq@2x.png in Resources */,
 				84C532F021E338BB00E9B909 /* me_account@2x.png in Resources */,
 				84C532D921E3307000E9B909 /* tab_bar_me_selected@3x.png in Resources */,
+				84C5331A21E348B400E9B909 /* login_qq@2x.png in Resources */,
 				84C532F321E338BB00E9B909 /* me_account@3x..png in Resources */,
 				84C532F721E3395300E9B909 /* avatar.png in Resources */,
+				84C5331821E348B400E9B909 /* login_sina@3x.png in Resources */,
+				84C5331621E348B400E9B909 /* login_qq@3x.png in Resources */,
 				84D2A37A219BFC4500932FDE /* LoginViewController.xib in Resources */,
 				84C532D821E3307000E9B909 /* tab_bar_me_selected@2x.png in Resources */,
 				84F6473F21AF8A71003CE863 /* more@2x.png in Resources */,
