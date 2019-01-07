@@ -91,12 +91,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellID = @"cellID";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    if (!cell) {
-        [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
-        cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    }
+
+    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+
     cell.textLabel.text = [self.dataArray objectAtIndex:indexPath.row];
     cell.imageView.image = [UIImage imageNamed:[self.imageArray objectAtIndex:indexPath.row]];
     

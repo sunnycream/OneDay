@@ -13,7 +13,6 @@
 #import "MangaViewController.h"
 #import "BookViewController.h"
 
-static NSString *cellID = @"cellID";
 @interface AlbumViewController ()
 
 @property (nonatomic, strong) NSMutableArray *imageArray;
@@ -24,13 +23,17 @@ static NSString *cellID = @"cellID";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.collectionView registerClass:[AlbumCell class] forCellWithReuseIdentifier:cellID];
-    
+
+    //先调用下collectionView
+    self.collectionView.backgroundColor = kBackgroundColor;
+
     [self.dataArray addObjectsFromArray:@[@"睡眠", @"饮食", @"日漫", @"书"]];
 }
 
 - (UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    static NSString *cellID = @"cellID";
+
+    [collectionView registerClass:[AlbumCell class] forCellWithReuseIdentifier:cellID];
     AlbumCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
 
     cell.albumImage.backgroundColor = [UIColor blackColor];

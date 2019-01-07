@@ -32,7 +32,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellID = @"cellID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
+    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
 
     return cell;
 }
