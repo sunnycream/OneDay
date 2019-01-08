@@ -67,7 +67,7 @@
         _textView = [[UITextView alloc] init];
         _textView.delegate = self;
         _textView.font = [UIFont systemFontOfSize:kDefaultTextSize];
-        _textView.tintColor = [Util colorWithHexString:@"#6495ED"];
+        _textView.tintColor = kBarSelectedColor;//光标颜色
         _textView.textContainerInset = UIEdgeInsetsMake(11, 0, 0, 0);
         [self.view addSubview:_textView];
 

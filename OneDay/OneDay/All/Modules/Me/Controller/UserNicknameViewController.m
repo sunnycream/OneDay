@@ -52,7 +52,7 @@
         _textField.delegate = self;
         _textField.placeholder = @"输入昵称";
         _textField.font = [UIFont systemFontOfSize:kDefaultTextSize];
-        _textField.tintColor = [Util colorWithHexString:@"#6495ED"];//光标颜色
+        _textField.tintColor = kBarSelectedColor;//光标颜色
 
         //左边距
         _textField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 0)];
