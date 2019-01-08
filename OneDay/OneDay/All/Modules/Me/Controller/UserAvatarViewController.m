@@ -68,10 +68,10 @@
 
 #pragma mark - 保存图片
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
-    NSLog(@"保存成功");
     if (error) {
-        NSLog(@"the error is: %@", error);
+        return;
     }
+    [self showTextOnly:@"保存成功"];
 }
 
 #pragma mark - UIImagePickerControllerDelegate

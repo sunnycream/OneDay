@@ -34,9 +34,11 @@
 
 #import "Util.h"
 #import "UIBarButtonItem+SCBarButtonItem.h"
+#import "MBProgressHUD+SCProgressHUD.h"
 
 //Third Party
 #import <Masonry/Masonry.h>
 //#import <UMSocialCore/UMSocialCore.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 
 #endif /* Prefix_pch */

@@ -20,6 +20,10 @@
     self.view.backgroundColor = kThemeBackgroundColor;
 }
 
+- (void)showTextOnly:(NSString *)text {
+    [MBProgressHUD showTextOnly:text];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

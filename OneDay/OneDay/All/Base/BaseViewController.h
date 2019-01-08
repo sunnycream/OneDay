@@ -10,4 +10,6 @@
 
 @interface BaseViewController : UIViewController
 
+- (void)showTextOnly:(NSString *)text;
+
 @end

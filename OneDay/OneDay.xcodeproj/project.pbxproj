@@ -61,6 +61,7 @@
 		84C64C4821DDB18700B69D56 /* BirthdayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C64C4721DDB18700B69D56 /* BirthdayViewController.m */; };
 		84D2A379219BFC4500932FDE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2A377219BFC4500932FDE /* LoginViewController.m */; };
 		84D2A37A219BFC4500932FDE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2A378219BFC4500932FDE /* LoginViewController.xib */; };
+		84DB9D8921E4418600D14589 /* MBProgressHUD+SCProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB9D8821E4418600D14589 /* MBProgressHUD+SCProgressHUD.m */; };
 		84F36E7A2119856700C571C2 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F36E792119856700C571C2 /* BaseTableViewController.m */; };
 		84F6473A21AF887E003CE863 /* qr_code@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F6473821AF887E003CE863 /* qr_code@2x.png */; };
 		84F6473B21AF887E003CE863 /* qr_code@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F6473921AF887E003CE863 /* qr_code@3x.png */; };
@@ -157,6 +158,8 @@
 		84D2A376219BFC4500932FDE /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		84D2A377219BFC4500932FDE /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		84D2A378219BFC4500932FDE /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		84DB9D8721E4418600D14589 /* MBProgressHUD+SCProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+SCProgressHUD.h"; sourceTree = "<group>"; };
+		84DB9D8821E4418600D14589 /* MBProgressHUD+SCProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+SCProgressHUD.m"; sourceTree = "<group>"; };
 		84F36E782119856700C571C2 /* BaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
 		84F36E792119856700C571C2 /* BaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		84F6473821AF887E003CE863 /* qr_code@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qr_code@2x.png"; sourceTree = "<group>"; };
@@ -195,6 +198,8 @@
 			children = (
 				8401789C21A5327600BBF45F /* UIBarButtonItem+SCBarButtonItem.h */,
 				8401789D21A5327600BBF45F /* UIBarButtonItem+SCBarButtonItem.m */,
+				84DB9D8721E4418600D14589 /* MBProgressHUD+SCProgressHUD.h */,
+				84DB9D8821E4418600D14589 /* MBProgressHUD+SCProgressHUD.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -609,6 +614,7 @@
 				84747E43211BEFA700389965 /* VideoViewController.m in Sources */,
 				84747E3A211BEF4800389965 /* SleepViewController.m in Sources */,
 				84747E49211C30C500389965 /* SettingViewController.m in Sources */,
+				84DB9D8921E4418600D14589 /* MBProgressHUD+SCProgressHUD.m in Sources */,
 				84747E4C211C310B00389965 /* StatisticsViewController.m in Sources */,
 				84D2A379219BFC4500932FDE /* LoginViewController.m in Sources */,
 				8449E17D211846A100DF4F21 /* AppDelegate.m in Sources */,
