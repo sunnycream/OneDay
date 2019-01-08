@@ -1,18 +1,18 @@
 //
-//  MangaViewController.m
+//  VideoViewController.m
 //  OneDay
 //
 //  Created by admin on 2018/8/9.
 //  Copyright © 2018年 admin. All rights reserved.
 //
 
-#import "MangaViewController.h"
+#import "VideoViewController.h"
 
-@interface MangaViewController ()
+@interface VideoViewController ()
 
 @end
 
-@implementation MangaViewController
+@implementation VideoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -1,5 +1,5 @@
 //
-//  MangaViewController.h
+//  VideoViewController.h
 //  OneDay
 //
 //  Created by admin on 2018/8/9.
@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface MangaViewController : BaseViewController
+@interface VideoViewController : BaseViewController
 
 @end

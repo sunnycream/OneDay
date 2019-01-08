@@ -10,7 +10,7 @@
 #import "NightCell.h"
 #import "SleepViewController.h"
 #import "DietViewController.h"
-#import "MangaViewController.h"
+#import "VideoViewController.h"
 #import "BookViewController.h"
 
 @interface NightViewController ()
@@ -27,7 +27,7 @@
     //先调用下collectionView
     self.collectionView.backgroundColor = kThemeBackgroundColor;
 
-    [self.dataArray addObjectsFromArray:@[@"睡眠", @"饮食", @"日漫", @"书"]];
+    [self.dataArray addObjectsFromArray:@[@"睡眠", @"饮食", @"影音", @"书"]];
 }
 
 - (UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -56,8 +56,8 @@
             [self.navigationController pushViewController:dietVC animated:YES];
             break;
         }
-        case 2:{//日漫
-            MangaViewController *mangaVC = [[MangaViewController alloc] init];
+        case 2:{//影音
+            VideoViewController *mangaVC = [[VideoViewController alloc] init];
             [self.navigationController pushViewController:mangaVC animated:YES];
             break;
         }

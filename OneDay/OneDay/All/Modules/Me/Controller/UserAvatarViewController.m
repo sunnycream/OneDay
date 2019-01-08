@@ -51,6 +51,7 @@
         [self checkAlbumPermission];
     }];
     UIAlertAction *save = [UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+#warning 点击save的时候，有时候会崩
         UIImageWriteToSavedPhotosAlbum(self.avatar.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
     }];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
