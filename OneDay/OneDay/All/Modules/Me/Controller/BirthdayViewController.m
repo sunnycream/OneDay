@@ -103,12 +103,14 @@
         [_sureButton addTarget:self action:@selector(sureAction) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:_sureButton];
 
+        _sureButton.layer.cornerRadius = 20;
+        _sureButton.clipsToBounds = YES;
+
         [_sureButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(100, 40));
             make.top.equalTo(self.datePicker.mas_bottom).offset(100);
             make.centerX.equalTo(self.view);
         }];
-
     }
     return _sureButton;
 }
