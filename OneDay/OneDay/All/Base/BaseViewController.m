@@ -21,6 +21,9 @@
 }
 
 - (void)showTextOnly:(NSString *)text {
+    if (text.length == 0) {
+        return;
+    }
     [MBProgressHUD showTextOnly:text];
 }
 
