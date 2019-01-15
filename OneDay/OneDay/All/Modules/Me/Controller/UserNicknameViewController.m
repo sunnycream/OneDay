@@ -10,7 +10,7 @@
 
 @interface UserNicknameViewController ()<UITextFieldDelegate>
 
-@property (nonatomic, strong) UITextField *textField;
+@property (nonatomic, strong) UITextField *nicknameTextField;
 
 @end
 
@@ -21,7 +21,17 @@
 
     self.title = @"设置昵称";
 
-    self.textField.backgroundColor = [UIColor whiteColor];
+    self.nicknameTextField.backgroundColor = [UIColor whiteColor];
+
+    UIBarButtonItem *rightBarItem = [UIBarButtonItem itemWithTitle:@"保存" titleColor:[UIColor blackColor] target:self action:@selector(rightButtonAction)];
+    self.navigationItem.rightBarButtonItem = rightBarItem;
+}
+
+- (void)rightButtonAction {
+    if (self.nicknameTextField.text.length == 0) {
+        return;
+    }
+    [self showTextOnly:@"已保存"];
 }
 
 - (void)changeNickname:(UITextField *)textField {
@@ -46,22 +56,22 @@
     }
 }
 
-- (UITextField *)textField {
-    if (!_textField) {
-        _textField = [[UITextField alloc] init];
-        _textField.delegate = self;
-        _textField.placeholder = @"输入昵称";
-        _textField.font = [UIFont systemFontOfSize:kDefaultTextSize];
-        _textField.tintColor = kBarSelectedColor;//光标颜色
+- (UITextField *)nicknameTextField {
+    if (!_nicknameTextField) {
+        _nicknameTextField = [[UITextField alloc] init];
+        _nicknameTextField.delegate = self;
+        _nicknameTextField.placeholder = @"输入昵称";
+        _nicknameTextField.font = [UIFont systemFontOfSize:kDefaultTextSize];
+        _nicknameTextField.tintColor = kBarSelectedColor;//光标颜色
 
         //左边距
-        _textField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 0)];
-        _textField.leftViewMode = UITextFieldViewModeAlways;
+        _nicknameTextField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 0)];
+        _nicknameTextField.leftViewMode = UITextFieldViewModeAlways;
 
-        [_textField addTarget:self action:@selector(changeNickname:) forControlEvents:UIControlEventEditingChanged];
-        [self.view addSubview:_textField];
+        [_nicknameTextField addTarget:self action:@selector(changeNickname:) forControlEvents:UIControlEventEditingChanged];
+        [self.view addSubview:_nicknameTextField];
 
-        [_textField mas_makeConstraints:^(MASConstraintMaker *make) {
+        [_nicknameTextField mas_makeConstraints:^(MASConstraintMaker *make) {
             make.height.mas_equalTo(40);
             make.top.equalTo(self.view.mas_top).offset(100);
             make.left.equalTo(self.view.mas_left).offset(10);
@@ -69,7 +79,7 @@
         }];
     }
 
-    return _textField;
+    return _nicknameTextField;
 }
 
 /*

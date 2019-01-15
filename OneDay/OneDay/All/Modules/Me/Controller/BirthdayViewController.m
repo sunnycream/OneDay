@@ -27,6 +27,13 @@
     [self birthdayLabel];
     [self datePicker];
     [self sureButton];
+    UIBarButtonItem *rightBarItem = [UIBarButtonItem itemWithTitle:@"确定" titleColor:[UIColor blackColor] target:self action:@selector(rightButtonAction)];
+    self.navigationItem.rightBarButtonItem = rightBarItem;
+}
+
+- (void)rightButtonAction {
+//    [self showTextOnly:@"已更改生辰"];
+    self.birthdayLabel.text = [NSString stringWithFormat:@"%@", self.birthadyString];
 }
 
 - (void)choiceDate:(UIDatePicker *)picker {
@@ -51,9 +58,9 @@
     }
 }
 
-- (void)sureAction {
-    self.birthdayLabel.text = [NSString stringWithFormat:@"%@", self.birthadyString];
-}
+//- (void)sureAction {
+//    self.birthdayLabel.text = [NSString stringWithFormat:@"%@", self.birthadyString];
+//}
 
 - (UILabel *)birthdayLabel {
     if (!_birthdayLabel) {
@@ -94,26 +101,26 @@
     return _datePicker;
 }
 
-- (UIButton *)sureButton {
-    if (!_sureButton) {
-        _sureButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_sureButton setBackgroundColor:kBarSelectedColor];
-        [_sureButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [_sureButton setTitle:@"确定" forState:UIControlStateNormal];
-        [_sureButton addTarget:self action:@selector(sureAction) forControlEvents:UIControlEventTouchUpInside];
-        [self.view addSubview:_sureButton];
-
-        _sureButton.layer.cornerRadius = 20;
-        _sureButton.clipsToBounds = YES;
-
-        [_sureButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(100, 40));
-            make.top.equalTo(self.datePicker.mas_bottom).offset(100);
-            make.centerX.equalTo(self.view);
-        }];
-    }
-    return _sureButton;
-}
+//- (UIButton *)sureButton {
+//    if (!_sureButton) {
+//        _sureButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//        [_sureButton setBackgroundColor:kBarSelectedColor];
+//        [_sureButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//        [_sureButton setTitle:@"确定" forState:UIControlStateNormal];
+//        [_sureButton addTarget:self action:@selector(sureAction) forControlEvents:UIControlEventTouchUpInside];
+//        [self.view addSubview:_sureButton];
+//
+//        _sureButton.layer.cornerRadius = 20;
+//        _sureButton.clipsToBounds = YES;
+//
+//        [_sureButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.size.mas_equalTo(CGSizeMake(100, 40));
+//            make.top.equalTo(self.datePicker.mas_bottom).offset(100);
+//            make.centerX.equalTo(self.view);
+//        }];
+//    }
+//    return _sureButton;
+//}
 
 /*
 #pragma mark - Navigation

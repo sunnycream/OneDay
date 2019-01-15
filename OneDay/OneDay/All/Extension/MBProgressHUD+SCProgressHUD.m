@@ -25,7 +25,7 @@
     //背景色
     hud.bezelView.style = MBProgressHUDBackgroundStyleBlur;
     hud.bezelView.color = kBarSelectedColor;
-    [hud hideAnimated:YES afterDelay:3.0f];
+    [hud hideAnimated:YES afterDelay:1.0f];
 }
 
 @end

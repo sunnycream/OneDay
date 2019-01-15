@@ -12,9 +12,10 @@
 
 + (UIBarButtonItem *)itemWithTitle:(NSString *)title titleColor:(UIColor *)titleColor target:(id)target action:(SEL)action {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.backgroundColor = [UIColor redColor];
     button.frame = CGRectMake(0, 0, 100, 40);
+    button.titleLabel.font = [UIFont systemFontOfSize:kDefaultTextSize];
     [button setTitle:title forState:UIControlStateNormal];
+    [button setTitleColor:titleColor forState:UIControlStateNormal];
     [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
 
     return [[UIBarButtonItem alloc] initWithCustomView:button];

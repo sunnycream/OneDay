@@ -12,7 +12,7 @@
 
 @interface UserSignatureViewController ()<UITextViewDelegate>
 
-@property (nonatomic, strong) UITextView *textView;
+@property (nonatomic, strong) UITextView *signatureTextView;
 @property (nonatomic, strong) UILabel *placeholder;
 @property (nonatomic, strong) UILabel *textCount;
 
@@ -25,10 +25,20 @@
 
     self.title = @"设置个性签名";
 
-    self.textView.backgroundColor = [UIColor whiteColor];
+    self.signatureTextView.backgroundColor = [UIColor whiteColor];
     self.placeholder.textColor = [Util colorWithHexString:@"#D3D3D3"];
     self.textCount.textColor = [UIColor whiteColor];
-    self.textCount.text = [NSString stringWithFormat:@"%lu/%d", (unsigned long)self.textView.text.length, kMaxLength];
+    self.textCount.text = [NSString stringWithFormat:@"%lu/%d", (unsigned long)self.signatureTextView.text.length, kMaxLength];
+
+    UIBarButtonItem *rightBarItem = [UIBarButtonItem itemWithTitle:@"保存" titleColor:[UIColor blackColor] target:self action:@selector(rightButtonAction)];
+    self.navigationItem.rightBarButtonItem = rightBarItem;
+}
+
+- (void)rightButtonAction {
+    if (self.signatureTextView.text.length == 0) {
+        return;
+    }
+    [self showTextOnly:@"已保存"];
 }
 
 - (void)textViewDidChange:(UITextView *)textView {
@@ -62,23 +72,23 @@
     }
 }
 
-- (UITextView *)textView {
-    if (!_textView) {
-        _textView = [[UITextView alloc] init];
-        _textView.delegate = self;
-        _textView.font = [UIFont systemFontOfSize:kDefaultTextSize];
-        _textView.tintColor = kBarSelectedColor;//光标颜色
-        _textView.textContainerInset = UIEdgeInsetsMake(11, 0, 0, 0);
-        [self.view addSubview:_textView];
+- (UITextView *)signatureTextView {
+    if (!_signatureTextView) {
+        _signatureTextView = [[UITextView alloc] init];
+        _signatureTextView.delegate = self;
+        _signatureTextView.font = [UIFont systemFontOfSize:kDefaultTextSize];
+        _signatureTextView.tintColor = kBarSelectedColor;//光标颜色
+        _signatureTextView.textContainerInset = UIEdgeInsetsMake(11, 0, 0, 0);
+        [self.view addSubview:_signatureTextView];
 
-        [_textView mas_makeConstraints:^(MASConstraintMaker *make) {
+        [_signatureTextView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.height.mas_equalTo(80);
             make.top.equalTo(self.view.mas_top).offset(100);
             make.left.equalTo(self.view.mas_left).offset(10);
             make.right.equalTo(self.view.mas_right).offset(-10);
         }];
     }
-    return _textView;
+    return _signatureTextView;
 }
 
 - (UILabel *)placeholder {
@@ -86,12 +96,12 @@
         _placeholder = [[UILabel alloc] init];
         _placeholder.text = @"输入个性签名";
         _placeholder.font = [UIFont systemFontOfSize:kDefaultTextSize];
-        [self.textView addSubview:_placeholder];
+        [self.signatureTextView addSubview:_placeholder];
 
         [_placeholder mas_makeConstraints:^(MASConstraintMaker *make) {
             make.height.mas_equalTo(30);
-            make.top.equalTo(self.textView.mas_top).offset(5);
-            make.left.equalTo(self.textView.mas_left).offset(5);
+            make.top.equalTo(self.signatureTextView.mas_top).offset(5);
+            make.left.equalTo(self.signatureTextView.mas_left).offset(5);
         }];
     }
     return _placeholder;
@@ -103,7 +113,7 @@
 //        _textCount.backgroundColor = [Util colorWithHexString:@"#6495ED"];
         _textCount.backgroundColor = kBarSelectedColor;
         _textCount.font = [UIFont systemFontOfSize:kDefaultTextSize];
-        [self.textView addSubview:_textCount];
+        [self.signatureTextView addSubview:_textCount];
 
 #warning constraints
         [_textCount mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -111,8 +121,8 @@
 //            make.bottom.equalTo(self.textView.mas_bottom).offset(-5);
 //            make.right.equalTo(self.textView.mas_right).offset(-5);
 
-            make.top.equalTo(self.textView.mas_top).offset(50);
-            make.left.equalTo(self.textView.mas_left).offset(kScreenWidth - 60);
+            make.top.equalTo(self.signatureTextView.mas_top).offset(50);
+            make.left.equalTo(self.signatureTextView.mas_left).offset(kScreenWidth - 60);
         }];
     }
     return _textCount;
