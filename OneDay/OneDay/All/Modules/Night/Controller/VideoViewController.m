@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"日漫";
+    self.title = @"影音";
 }
 
 - (void)didReceiveMemoryWarning {
