@@ -12,12 +12,15 @@
 
 @end
 
+static NSString *cellID = @"cellID";
 @implementation BaseTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     [self.view addSubview:self.tableView];
+
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
 }
 
 #pragma mark - UITableViewDataSource
@@ -30,9 +33,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellID = @"cellID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
 
     return cell;
 }

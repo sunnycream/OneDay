@@ -12,10 +12,13 @@
 
 @end
 
+static NSString *cellID = @"cellID";
 @implementation BaseCollectionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cellID];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -28,9 +31,7 @@
 }
 
 - (UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    static NSString *cellID = @"cellID";
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cellID];
 
     return cell;
 }

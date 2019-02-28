@@ -20,11 +20,13 @@
 
 @end
 
+static NSString *cellID = @"cellID";
 @implementation MeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self.tableView registerClass:[MeCell class] forCellReuseIdentifier:cellID];
     self.tableView.bounces = NO;
     [self.tableView setTableHeaderView:self.headerView];
     [self setupUserInfo];
@@ -90,9 +92,6 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellID = @"cellID";
-
-    [tableView registerClass:[MeCell class] forCellReuseIdentifier:cellID];
     MeCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
 
     cell.icon.image = [UIImage imageNamed:[self.imageArray objectAtIndex:indexPath.row]];

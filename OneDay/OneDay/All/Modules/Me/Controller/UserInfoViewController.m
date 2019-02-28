@@ -17,6 +17,7 @@
 
 @end
 
+static NSString *cellID = @"cellID";
 @implementation UserInfoViewController
 
 - (void)viewDidLoad {
@@ -24,13 +25,11 @@
     
     self.title = @"个人信息";
 
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
     [self.dataArray addObjectsFromArray:@[@"头像", @"昵称", @"二维码", @"个性签名", @"生辰"]];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellID = @"cellID";
-
-    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
 
     cell.textLabel.text = [self.dataArray objectAtIndex:indexPath.row];

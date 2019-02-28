@@ -12,13 +12,16 @@
 
 @end
 
+static NSString *cellID = @"cellID";
 @implementation SettingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.title = @"设置";
-    
+
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
+
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) style:UITableViewStyleGrouped];
 
     NSArray *array = @[@[@"免打扰模式", @"夜间模式"],
@@ -37,9 +40,6 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellID = @"cellID";
-
-    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
 
     cell.textLabel.text =  self.dataArray[indexPath.section][indexPath.row];

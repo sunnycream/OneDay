@@ -19,21 +19,18 @@
 
 @end
 
+static NSString *cellID = @"cellID";
 @implementation NightViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    //先调用下collectionView
-    self.collectionView.backgroundColor = kThemeBackgroundColor;
+    [self.collectionView registerClass:[NightCell class] forCellWithReuseIdentifier:cellID];
 
     [self.dataArray addObjectsFromArray:@[@"睡眠", @"饮食", @"影音", @"书"]];
 }
 
 - (UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    static NSString *cellID = @"cellID";
-
-    [collectionView registerClass:[NightCell class] forCellWithReuseIdentifier:cellID];
     NightCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
 
     cell.icon.backgroundColor = [UIColor blackColor];
