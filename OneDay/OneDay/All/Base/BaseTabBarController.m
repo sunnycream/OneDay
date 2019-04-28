@@ -42,7 +42,6 @@
 }
 
 - (void)setChildControllers:(UIViewController *)viewController title:(NSString *)title normalImage:(UIImage *)normalImage selectedImage:(UIImage *)selectedImage {
-//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewController];
     BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:viewController];
 
     nav.tabBarItem.title = title;

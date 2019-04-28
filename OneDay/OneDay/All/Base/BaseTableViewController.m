@@ -53,7 +53,6 @@ static NSString *cellID = @"cellID";
         _tableView.rowHeight = 50;
         _tableView.tableFooterView = [[UIView alloc] init];
         _tableView.separatorInset = UIEdgeInsetsZero;//分割线为屏幕宽度
-//        [self.view addSubview:_tableView];
     }
     return _tableView;
 }
