@@ -36,17 +36,6 @@ static NSString *cellID = @"cellID";
     return cell;
 }
 
-#pragma mark - UICollectionViewDelegateFlowLayout
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat width = (kScreenWidth - 10 * 3) / 2;
-
-    return CGSizeMake(width, width + 20);
-}
-
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(10, 10, 10, 10);
-}
-
 #pragma mark - lazy load
 - (UICollectionView *)collectionView {
     if (!_collectionView) {

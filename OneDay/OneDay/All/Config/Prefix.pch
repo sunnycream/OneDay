@@ -15,6 +15,13 @@
 #define ScreenWidth     self.view.frame.size.width
 #define ScreenHeight    self.view.frame.size.height
 
+//状态栏高度
+#define kStatsBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+//导航栏高度
+#define kNavBarHeight   self.navigationController.navigationBar.frame.size.height
+//轮播图高度
+#define kBannerWidth    (kScreenWidth - 40)
+
 #define kThemeBackgroundColor       [Util colorWithHexString:@"#F5F5F5"]
 #define kBarNormalColor             [Util colorWithHexString:@"#000000"]
 #define kBarSelectedColor           [Util colorWithHexString:@"#FF69B4"]
