@@ -33,8 +33,17 @@ static NSString *cellID = @"cellID";
 
     [self.dataArray addObjectsFromArray:@[@"睡眠", @"饮食", @"影音", @"书"]];
 
+    [self setupBanner];
+    [self setupTimer];
+}
+
+- (void)setupBanner {
+    UILabel *firstLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, kBannerWidth, 30)];
+    firstLabel.text = self.bannerArray.lastObject;
+    [self.bannerView addSubview:firstLabel];
+
     for (int i = 0; i < self.bannerArray.count; i++) {
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(kBannerWidth * i, 100, kBannerWidth, 30)];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(kBannerWidth * (i + 1), 100, kBannerWidth, 30)];
         label.backgroundColor = [UIColor blackColor];
         label.textColor = [UIColor whiteColor];
         label.textAlignment = NSTextAlignmentCenter;
@@ -42,15 +51,20 @@ static NSString *cellID = @"cellID";
         [self.bannerView addSubview:label];
     }
 
-    [self setupTimer];
+    UILabel *lastLabel = [[UILabel alloc] initWithFrame:CGRectMake((self.bannerArray.count + 1) * kBannerWidth, 100, kBannerWidth, 30)];
+    lastLabel.text = self.bannerArray.firstObject;
+    [self.bannerView addSubview:lastLabel];
+
+    //设置UIScrollView的起始偏移距离（将第一张跳过）
+    self.bannerView.contentOffset = CGPointMake(kBannerWidth, 0);
+
+    [self.view addSubview:self.pageControl];
 }
 
 - (void)setupTimer {
     [self.timer invalidate];
     self.timer = [NSTimer timerWithTimeInterval:2.0f target:self selector:@selector(startTimer) userInfo:nil repeats:YES];
-//    NSLog(@"currentMode-----%@", [NSRunLoop currentRunLoop].currentMode);//kCFRunLoopDefaultMode
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
-    //NSRunLoopCommonModes = NSDefaultRunLoopMode + NSEventTrackingRunLoopMode
 }
 
 //开启定时器
@@ -124,9 +138,18 @@ static NSString *cellID = @"cellID";
 }
 
 #pragma mark - UIScrollViewDelegate
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    NSInteger page = scrollView.contentOffset.x / scrollView.frame.size.width;
-    self.pageControl.currentPage = page;
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    if (scrollView.contentOffset.x == 0) {
+        //最后一张
+        scrollView.contentOffset = CGPointMake(self.bannerArray.count * kBannerWidth, 0);
+        self.pageControl.currentPage = self.bannerArray.count;
+    } else if (scrollView.contentOffset.x == (self.bannerArray.count + 1) * kBannerWidth) {
+        //第一张
+        scrollView.contentOffset = CGPointMake(kBannerWidth, 0);
+        self.pageControl.currentPage = 0;
+    } else {
+        self.pageControl.currentPage = scrollView.contentOffset.x / kBannerWidth - 1;
+    }
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -139,7 +162,7 @@ static NSString *cellID = @"cellID";
 
 #pragma mark - event method
 - (void)changePage:(UIPageControl *)pageControl {
-    NSInteger page = pageControl.currentPage;
+    NSInteger page = (pageControl.currentPage + 1);
     [self.bannerView setContentOffset:CGPointMake(kBannerWidth * page, 0)];
 }
 
@@ -159,7 +182,7 @@ static NSString *cellID = @"cellID";
         _bannerView.delegate = self;
         _bannerView.pagingEnabled = YES;//设置可以翻页
         _bannerView.backgroundColor = [UIColor grayColor];
-        _bannerView.contentSize = CGSizeMake(kBannerWidth * self.bannerArray.count, 0);
+        _bannerView.contentSize = CGSizeMake(kBannerWidth * (self.bannerArray.count + 2), 0);
         [self.view addSubview:_bannerView];
     }
     return _bannerView;
@@ -175,7 +198,7 @@ static NSString *cellID = @"cellID";
         _pageControl.currentPageIndicatorTintColor = [UIColor greenColor];
         _pageControl.pageIndicatorTintColor = [UIColor blueColor];
         [_pageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
-        [self.view addSubview:_pageControl];
+//        [self.view addSubview:_pageControl];
     }
     return _pageControl;
 }
