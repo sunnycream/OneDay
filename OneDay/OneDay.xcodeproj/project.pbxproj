@@ -29,6 +29,8 @@
 		84747E49211C30C500389965 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84747E48211C30C500389965 /* SettingViewController.m */; };
 		84747E4C211C310B00389965 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84747E4B211C310B00389965 /* StatisticsViewController.m */; };
 		84747E4F211C34F100389965 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84747E4E211C34F100389965 /* AccountViewController.m */; };
+		8493BC1122AF596E0065C05B /* BasePopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493BC1022AF596E0065C05B /* BasePopupViewController.m */; };
+		8493BC1422AF5B680065C05B /* CommonAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493BC1322AF5B680065C05B /* CommonAlertViewController.m */; };
 		84C532C821E32B7100E9B909 /* nav_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C532C621E32B7100E9B909 /* nav_back@2x.png */; };
 		84C532C921E32B7100E9B909 /* nav_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C532C721E32B7100E9B909 /* nav_back@3x.png */; };
 		84C532D621E3307000E9B909 /* tab_bar_me_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C532D221E3307000E9B909 /* tab_bar_me_normal@2x.png */; };
@@ -122,6 +124,10 @@
 		84747E4B211C310B00389965 /* StatisticsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
 		84747E4D211C34F100389965 /* AccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
 		84747E4E211C34F100389965 /* AccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		8493BC0F22AF596E0065C05B /* BasePopupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasePopupViewController.h; sourceTree = "<group>"; };
+		8493BC1022AF596E0065C05B /* BasePopupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasePopupViewController.m; sourceTree = "<group>"; };
+		8493BC1222AF5B680065C05B /* CommonAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonAlertViewController.h; sourceTree = "<group>"; };
+		8493BC1322AF5B680065C05B /* CommonAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonAlertViewController.m; sourceTree = "<group>"; };
 		84C532C621E32B7100E9B909 /* nav_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back@2x.png"; sourceTree = "<group>"; };
 		84C532C721E32B7100E9B909 /* nav_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back@3x.png"; sourceTree = "<group>"; };
 		84C532D221E3307000E9B909 /* tab_bar_me_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_bar_me_normal@2x.png"; sourceTree = "<group>"; };
@@ -207,6 +213,7 @@
 		8449E15D2118467F00DF4F21 /* All */ = {
 			isa = PBXGroup;
 			children = (
+				8493BC0E22AF594B0065C05B /* PopupViewController */,
 				8449E15E211846A100DF4F21 /* Resource */,
 				8449E166211846A100DF4F21 /* Delegate */,
 				8449E172211846A100DF4F21 /* Base */,
@@ -300,6 +307,17 @@
 				84747E36211BE13200389965 /* Util.m */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		8493BC0E22AF594B0065C05B /* PopupViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8493BC0F22AF596E0065C05B /* BasePopupViewController.h */,
+				8493BC1022AF596E0065C05B /* BasePopupViewController.m */,
+				8493BC1222AF5B680065C05B /* CommonAlertViewController.h */,
+				8493BC1322AF5B680065C05B /* CommonAlertViewController.m */,
+			);
+			path = PopupViewController;
 			sourceTree = "<group>";
 		};
 		84C532C521E32B6500E9B909 /* nav */ = {
@@ -626,6 +644,7 @@
 				8449E181211846A100DF4F21 /* BaseViewController.m in Sources */,
 				8401789721A4FD8D00BBF45F /* UserQRCodeViewController.m in Sources */,
 				845AB11A2119D2FA002DE3FE /* NightViewController.m in Sources */,
+				8493BC1122AF596E0065C05B /* BasePopupViewController.m in Sources */,
 				8401789121A4FD6200BBF45F /* UserAvatarViewController.m in Sources */,
 				84C5330F21E33E3500E9B909 /* MeCell.m in Sources */,
 				84747E4F211C34F100389965 /* AccountViewController.m in Sources */,
@@ -638,6 +657,7 @@
 				8401789421A4FD8000BBF45F /* UserNicknameViewController.m in Sources */,
 				84747E37211BE13200389965 /* Util.m in Sources */,
 				84747E46211C309100389965 /* UserInfoViewController.m in Sources */,
+				8493BC1422AF5B680065C05B /* CommonAlertViewController.m in Sources */,
 				8449E17E211846A100DF4F21 /* MeViewController.m in Sources */,
 				84F36E7A2119856700C571C2 /* BaseTableViewController.m in Sources */,
 			);

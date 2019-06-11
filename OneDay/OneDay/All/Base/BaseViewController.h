@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^CommonBlock)(NSDictionary *dict);
 @interface BaseViewController : UIViewController
+
+@property (nonatomic, copy) CommonBlock block;
 
 - (void)showTextOnly:(NSString *)text;
 

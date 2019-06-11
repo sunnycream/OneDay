@@ -48,7 +48,9 @@ static NSString *cellID = @"cellID";
 - (void)setupTimer {
     [self.timer invalidate];
     self.timer = [NSTimer timerWithTimeInterval:2.0f target:self selector:@selector(startTimer) userInfo:nil repeats:YES];
+//    NSLog(@"currentMode-----%@", [NSRunLoop currentRunLoop].currentMode);//kCFRunLoopDefaultMode
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    //NSRunLoopCommonModes = NSDefaultRunLoopMode + NSEventTrackingRunLoopMode
 }
 
 //开启定时器
