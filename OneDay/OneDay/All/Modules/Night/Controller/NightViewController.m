@@ -16,8 +16,10 @@
 @interface NightViewController ()<UIScrollViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *imageArray;
+@property (nonatomic, strong) NSMutableArray *bannerArray;
 @property (nonatomic, strong) UIScrollView *bannerView;
 @property (nonatomic, strong) UIPageControl *pageControl;
+@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
@@ -31,14 +33,35 @@ static NSString *cellID = @"cellID";
 
     [self.dataArray addObjectsFromArray:@[@"睡眠", @"饮食", @"影音", @"书"]];
 
-    for (int i = 0; i < self.dataArray.count; i++) {
+    for (int i = 0; i < self.bannerArray.count; i++) {
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(kBannerWidth * i, 100, kBannerWidth, 30)];
         label.backgroundColor = [UIColor blackColor];
         label.textColor = [UIColor whiteColor];
         label.textAlignment = NSTextAlignmentCenter;
-        label.text = self.dataArray[i];
+        label.text = self.bannerArray[i];
         [self.bannerView addSubview:label];
     }
+
+    [self setupTimer];
+}
+
+- (void)setupTimer {
+    [self.timer invalidate];
+    self.timer = [NSTimer timerWithTimeInterval:2.0f target:self selector:@selector(startTimer) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+}
+
+//开启定时器
+- (void)startTimer {
+    NSInteger page = (self.pageControl.currentPage + 1) % self.bannerArray.count;
+    self.pageControl.currentPage = page;
+    [self changePage:self.pageControl];
+}
+
+//关闭定时器
+- (void)invalidateTimer {
+    [self.timer invalidate];
+    self.timer = nil;
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -98,26 +121,43 @@ static NSString *cellID = @"cellID";
     return 0.f;
 }
 
-#pragma UIScrollViewDelegate
+#pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     NSInteger page = scrollView.contentOffset.x / scrollView.frame.size.width;
     self.pageControl.currentPage = page;
 }
 
-#pragma event method
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [self invalidateTimer];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    [self setupTimer];
+}
+
+#pragma mark - event method
 - (void)changePage:(UIPageControl *)pageControl {
     NSInteger page = pageControl.currentPage;
     [self.bannerView setContentOffset:CGPointMake(kBannerWidth * page, 0)];
 }
 
 #pragma mark - lazy load
+- (NSMutableArray *)bannerArray {
+    if (!_bannerArray) {
+        _bannerArray = [NSMutableArray array];
+        NSArray *array = @[@"睡眠", @"饮食", @"影音", @"书"];
+        [_bannerArray addObjectsFromArray:array];
+    }
+    return _bannerArray;
+}
+
 - (UIScrollView *)bannerView {
     if (!_bannerView) {
         _bannerView = [[UIScrollView alloc] initWithFrame:CGRectMake(20, kStatsBarHeight + kNavBarHeight + 20, kBannerWidth, 200)];
         _bannerView.delegate = self;
         _bannerView.pagingEnabled = YES;//设置可以翻页
         _bannerView.backgroundColor = [UIColor grayColor];
-        _bannerView.contentSize = CGSizeMake(kBannerWidth * self.dataArray.count, 0);
+        _bannerView.contentSize = CGSizeMake(kBannerWidth * self.bannerArray.count, 0);
         [self.view addSubview:_bannerView];
     }
     return _bannerView;
@@ -129,7 +169,7 @@ static NSString *cellID = @"cellID";
         _pageControl.backgroundColor = [UIColor redColor];
         _pageControl.hidesForSinglePage = YES;
         _pageControl.currentPage = 0;
-        _pageControl.numberOfPages = self.dataArray.count;
+        _pageControl.numberOfPages = self.bannerArray.count;
         _pageControl.currentPageIndicatorTintColor = [UIColor greenColor];
         _pageControl.pageIndicatorTintColor = [UIColor blueColor];
         [_pageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
