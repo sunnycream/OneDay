@@ -47,5 +47,6 @@
 #import <Masonry/Masonry.h>
 //#import <UMSocialCore/UMSocialCore.h>
 #import <MBProgressHUD/MBProgressHUD.h>
+#import <MJRefresh/MJRefresh.h>
 
 #endif /* Prefix_pch */

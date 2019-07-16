@@ -12,6 +12,14 @@
 		8401789721A4FD8D00BBF45F /* UserQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401789621A4FD8D00BBF45F /* UserQRCodeViewController.m */; };
 		8401789A21A4FDAB00BBF45F /* UserSignatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401789921A4FDAB00BBF45F /* UserSignatureViewController.m */; };
 		8401789E21A5327600BBF45F /* UIBarButtonItem+SCBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401789D21A5327600BBF45F /* UIBarButtonItem+SCBarButtonItem.m */; };
+		84253C4C22DDA30D007D2ACE /* DayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84253C4B22DDA30D007D2ACE /* DayCell.m */; };
+		84253C5022DDA334007D2ACE /* DayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84253C4F22DDA334007D2ACE /* DayModel.m */; };
+		84253C5822DDAC1F007D2ACE /* bp2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84253C5222DDAC1F007D2ACE /* bp2@3x.png */; };
+		84253C5922DDAC1F007D2ACE /* bp3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84253C5322DDAC1F007D2ACE /* bp3@2x.png */; };
+		84253C5A22DDAC1F007D2ACE /* bp2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84253C5422DDAC1F007D2ACE /* bp2@2x.png */; };
+		84253C5B22DDAC1F007D2ACE /* bp1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84253C5522DDAC1F007D2ACE /* bp1@2x.png */; };
+		84253C5C22DDAC1F007D2ACE /* bp3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84253C5622DDAC1F007D2ACE /* bp3@3x.png */; };
+		84253C5D22DDAC1F007D2ACE /* bp1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84253C5722DDAC1F007D2ACE /* bp1@3x.png */; };
 		8449E17D211846A100DF4F21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449E168211846A100DF4F21 /* AppDelegate.m */; };
 		8449E17E211846A100DF4F21 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449E16E211846A100DF4F21 /* MeViewController.m */; };
 		8449E17F211846A100DF4F21 /* DayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449E16F211846A100DF4F21 /* DayViewController.m */; };
@@ -89,6 +97,16 @@
 		8401789921A4FDAB00BBF45F /* UserSignatureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserSignatureViewController.m; sourceTree = "<group>"; };
 		8401789C21A5327600BBF45F /* UIBarButtonItem+SCBarButtonItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+SCBarButtonItem.h"; sourceTree = "<group>"; };
 		8401789D21A5327600BBF45F /* UIBarButtonItem+SCBarButtonItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+SCBarButtonItem.m"; sourceTree = "<group>"; };
+		84253C4A22DDA30D007D2ACE /* DayCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DayCell.h; sourceTree = "<group>"; };
+		84253C4B22DDA30D007D2ACE /* DayCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DayCell.m; sourceTree = "<group>"; };
+		84253C4E22DDA334007D2ACE /* DayModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DayModel.h; sourceTree = "<group>"; };
+		84253C4F22DDA334007D2ACE /* DayModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DayModel.m; sourceTree = "<group>"; };
+		84253C5222DDAC1F007D2ACE /* bp2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bp2@3x.png"; sourceTree = "<group>"; };
+		84253C5322DDAC1F007D2ACE /* bp3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bp3@2x.png"; sourceTree = "<group>"; };
+		84253C5422DDAC1F007D2ACE /* bp2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bp2@2x.png"; sourceTree = "<group>"; };
+		84253C5522DDAC1F007D2ACE /* bp1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bp1@2x.png"; sourceTree = "<group>"; };
+		84253C5622DDAC1F007D2ACE /* bp3@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bp3@3x.png"; sourceTree = "<group>"; };
+		84253C5722DDAC1F007D2ACE /* bp1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bp1@3x.png"; sourceTree = "<group>"; };
 		8449E167211846A100DF4F21 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8449E168211846A100DF4F21 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8449E16B211846A100DF4F21 /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
@@ -210,6 +228,37 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		84253C4922DDA2E8007D2ACE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84253C4A22DDA30D007D2ACE /* DayCell.h */,
+				84253C4B22DDA30D007D2ACE /* DayCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84253C4D22DDA314007D2ACE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84253C4E22DDA334007D2ACE /* DayModel.h */,
+				84253C4F22DDA334007D2ACE /* DayModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84253C5122DDAC0D007D2ACE /* common */ = {
+			isa = PBXGroup;
+			children = (
+				84253C5522DDAC1F007D2ACE /* bp1@2x.png */,
+				84253C5722DDAC1F007D2ACE /* bp1@3x.png */,
+				84253C5422DDAC1F007D2ACE /* bp2@2x.png */,
+				84253C5222DDAC1F007D2ACE /* bp2@3x.png */,
+				84253C5322DDAC1F007D2ACE /* bp3@2x.png */,
+				84253C5622DDAC1F007D2ACE /* bp3@3x.png */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
 		8449E15D2118467F00DF4F21 /* All */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +277,7 @@
 		8449E15E211846A100DF4F21 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				84253C5122DDAC0D007D2ACE /* common */,
 				84C532C521E32B6500E9B909 /* nav */,
 				84D2A37B219BFDF400932FDE /* login */,
 				8449E15F211846A100DF4F21 /* tabbar */,
@@ -344,6 +394,8 @@
 			isa = PBXGroup;
 			children = (
 				84C5A6F3211A8B8F00E96CAB /* Controller */,
+				84253C4922DDA2E8007D2ACE /* View */,
+				84253C4D22DDA314007D2ACE /* Model */,
 			);
 			path = Day;
 			sourceTree = "<group>";
@@ -517,6 +569,7 @@
 				84F82223210979BB0006A913 /* Sources */,
 				84F82224210979BB0006A913 /* Frameworks */,
 				84F82225210979BB0006A913 /* Resources */,
+				80AD6ACE76C49B90FC875080 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -566,12 +619,16 @@
 			files = (
 				84C5331B21E348B400E9B909 /* login_wechat@2x.png in Resources */,
 				84F82237210979C30006A913 /* LaunchScreen.storyboard in Resources */,
+				84253C5C22DDAC1F007D2ACE /* bp3@3x.png in Resources */,
+				84253C5822DDAC1F007D2ACE /* bp2@3x.png in Resources */,
 				84F6473E21AF8A71003CE863 /* nav_more@3x.png in Resources */,
 				84C532C821E32B7100E9B909 /* nav_back@2x.png in Resources */,
 				84C532F221E338BB00E9B909 /* me_setting@3x.png in Resources */,
 				84C532D621E3307000E9B909 /* tab_bar_me_normal@2x.png in Resources */,
 				84F82234210979C30006A913 /* Assets.xcassets in Resources */,
 				84C532E021E3335C00E9B909 /* tab_bar_day_normal@2x.png in Resources */,
+				84253C5A22DDAC1F007D2ACE /* bp2@2x.png in Resources */,
+				84253C5B22DDAC1F007D2ACE /* bp1@2x.png in Resources */,
 				84C532E121E3335C00E9B909 /* tab_bar_day_selected@3x.png in Resources */,
 				84C532C921E32B7100E9B909 /* nav_back@3x.png in Resources */,
 				84C532D721E3307000E9B909 /* tab_bar_me_normal@3x.png in Resources */,
@@ -579,6 +636,7 @@
 				84C5331721E348B400E9B909 /* login_wechat@3x.png in Resources */,
 				84C532F121E338BB00E9B909 /* me_setting@2x.png in Resources */,
 				84F6473B21AF887E003CE863 /* qr_code@3x.png in Resources */,
+				84253C5922DDAC1F007D2ACE /* bp3@2x.png in Resources */,
 				84C532E921E3336300E9B909 /* tab_bar_night_selected@2x.png in Resources */,
 				84C532E621E3336300E9B909 /* tab_bar_night_selected@3x.png in Resources */,
 				84C532E821E3336300E9B909 /* tab_bar_night_normal@3x.png in Resources */,
@@ -586,6 +644,7 @@
 				84C532DF21E3335C00E9B909 /* tab_bar_day_selected@2x.png in Resources */,
 				84C5330A21E33D6700E9B909 /* me_statistical@2x.png in Resources */,
 				84C532E721E3336300E9B909 /* tab_bar_night_normal@2x.png in Resources */,
+				84253C5D22DDAC1F007D2ACE /* bp1@3x.png in Resources */,
 				84F6473A21AF887E003CE863 /* qr_code@2x.png in Resources */,
 				84C532DE21E3335C00E9B909 /* tab_bar_day_normal@3x.png in Resources */,
 				84C532F021E338BB00E9B909 /* me_account@2x.png in Resources */,
@@ -622,6 +681,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		80AD6ACE76C49B90FC875080 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OneDay/Pods-OneDay-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneDay/Pods-OneDay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -631,6 +708,7 @@
 			files = (
 				84747E43211BEFA700389965 /* VideoViewController.m in Sources */,
 				84747E3A211BEF4800389965 /* SleepViewController.m in Sources */,
+				84253C4C22DDA30D007D2ACE /* DayCell.m in Sources */,
 				84747E49211C30C500389965 /* SettingViewController.m in Sources */,
 				84DB9D8921E4418600D14589 /* MBProgressHUD+SCProgressHUD.m in Sources */,
 				84747E4C211C310B00389965 /* StatisticsViewController.m in Sources */,
@@ -642,6 +720,7 @@
 				845AB1202119D6FF002DE3FE /* NightCell.m in Sources */,
 				845AB11D2119D43C002DE3FE /* BaseCollectionViewController.m in Sources */,
 				8449E181211846A100DF4F21 /* BaseViewController.m in Sources */,
+				84253C5022DDA334007D2ACE /* DayModel.m in Sources */,
 				8401789721A4FD8D00BBF45F /* UserQRCodeViewController.m in Sources */,
 				845AB11A2119D2FA002DE3FE /* NightViewController.m in Sources */,
 				8493BC1122AF596E0065C05B /* BasePopupViewController.m in Sources */,
