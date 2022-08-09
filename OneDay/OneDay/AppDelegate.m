@@ -24,11 +24,6 @@
     
     [self.window makeKeyAndVisible];
 
-//    [[UMSocialManager defaultManager] setUmSocialAppkey:UMengKey];
-    //    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:@"" appSecret:@"" redirectURL:@""];
-//    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"" appSecret:@"" redirectURL:@""];
-//    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:SinaAppKey appSecret:SinaAppSecret redirectURL:nil];
-
     return YES;
 }
 

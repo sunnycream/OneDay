@@ -259,21 +259,6 @@
 			path = common;
 			sourceTree = "<group>";
 		};
-		8449E15D2118467F00DF4F21 /* All */ = {
-			isa = PBXGroup;
-			children = (
-				8493BC0E22AF594B0065C05B /* PopupViewController */,
-				8449E15E211846A100DF4F21 /* Resource */,
-				8449E166211846A100DF4F21 /* Delegate */,
-				8449E172211846A100DF4F21 /* Base */,
-				8401789B21A5321E00BBF45F /* Extension */,
-				84747E34211BE10500389965 /* Util */,
-				845AB1142119A0D0002DE3FE /* Config */,
-				8449E169211846A100DF4F21 /* Modules */,
-			);
-			path = All;
-			sourceTree = "<group>";
-		};
 		8449E15E211846A100DF4F21 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,15 +288,6 @@
 				84C532D521E3307000E9B909 /* tab_bar_me_selected@3x.png */,
 			);
 			path = tabbar;
-			sourceTree = "<group>";
-		};
-		8449E166211846A100DF4F21 /* Delegate */ = {
-			isa = PBXGroup;
-			children = (
-				8449E167211846A100DF4F21 /* AppDelegate.h */,
-				8449E168211846A100DF4F21 /* AppDelegate.m */,
-			);
-			path = Delegate;
 			sourceTree = "<group>";
 		};
 		8449E169211846A100DF4F21 /* Modules */ = {
@@ -540,7 +516,15 @@
 		84F82229210979BB0006A913 /* OneDay */ = {
 			isa = PBXGroup;
 			children = (
-				8449E15D2118467F00DF4F21 /* All */,
+				8449E167211846A100DF4F21 /* AppDelegate.h */,
+				8449E168211846A100DF4F21 /* AppDelegate.m */,
+				8493BC0E22AF594B0065C05B /* PopupViewController */,
+				8449E15E211846A100DF4F21 /* Resource */,
+				8449E172211846A100DF4F21 /* Base */,
+				8401789B21A5321E00BBF45F /* Extension */,
+				84747E34211BE10500389965 /* Util */,
+				845AB1142119A0D0002DE3FE /* Config */,
+				8449E169211846A100DF4F21 /* Modules */,
 				84F82233210979C30006A913 /* Assets.xcassets */,
 				84F82235210979C30006A913 /* LaunchScreen.storyboard */,
 				84F82238210979C30006A913 /* Info.plist */,
@@ -873,8 +857,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EMQX9E3669;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/OneDay/All/Config/Prefix.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/OneDay/Config/Prefix.pch";
 				INFOPLIST_FILE = OneDay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -893,8 +877,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EMQX9E3669;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/OneDay/All/Config/Prefix.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/OneDay/Config/Prefix.pch";
 				INFOPLIST_FILE = OneDay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
