@@ -15,7 +15,6 @@
 
 @interface MeViewController ()
 
-@property (nonatomic, strong) NSMutableArray *imageArray;
 @property (nonatomic, strong) UIView *headerView;
 
 @end
@@ -27,11 +26,63 @@ static NSString *cellID = @"cellID";
     [super viewDidLoad];
 
     [self.tableView registerClass:[MeCell class] forCellReuseIdentifier:cellID];
-    self.tableView.bounces = NO;
     [self.tableView setTableHeaderView:self.headerView];
+//    self.tableView.tableHeaderView = self.headerView;//作用同上
+    
+    NSDictionary *dic1 = @{@"text": @"统计", @"icon": @"me_statistical"};
+    NSDictionary *dic2 = @{@"text": @"账号", @"icon": @"me_account"};
+    NSDictionary *dic3 = @{@"text": @"设置", @"icon": @"me_setting"};
+    [self.dataArray addObject:dic1];
+    [self.dataArray addObject:dic2];
+    [self.dataArray addObject:dic3];
+    
     [self setupUserInfo];
+}
 
-    [self.dataArray addObjectsFromArray:@[@"统计", @"账号", @"设置"]];
+#pragma mark - UITableViewDelegate, UITableViewDataSource
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    MeCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+
+    cell.icon.image = [UIImage imageNamed:self.dataArray[indexPath.row][@"icon"]];
+    cell.title.text = self.dataArray[indexPath.row][@"text"];
+
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    switch (indexPath.row) {
+        case 0:{//统计
+            StatisticsViewController *statisticsVC = [[StatisticsViewController alloc] init];
+            [self.navigationController pushViewController:statisticsVC animated:YES];
+        }break;
+        case 1:{//账户
+            AccountViewController *accountVC = [[AccountViewController alloc] init];
+            [self.navigationController pushViewController:accountVC animated:YES];
+        }break;
+        case 2:{//设置
+            SettingViewController *settingVC = [[SettingViewController alloc] init];
+            [self.navigationController pushViewController:settingVC animated:YES];
+        }break;
+        default:
+            break;
+    }
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *view = [[UIView alloc] init];
+    return view;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 10.0f;
+}
+
+#pragma mark - 其他
+- (void)enterUserInfo {
+    UserInfoViewController *userInfoVC = [[UserInfoViewController alloc] init];
+    [self.navigationController pushViewController:userInfoVC animated:YES];
 }
 
 - (void)setupUserInfo {
@@ -42,6 +93,8 @@ static NSString *cellID = @"cellID";
     //头像
     UIImageView *avatar = [[UIImageView alloc] init];
     avatar.image = [UIImage imageNamed:@"avatar"];
+    avatar.layer.cornerRadius = 5.f;
+    avatar.layer.masksToBounds = YES;
     [self.headerView addSubview:avatar];
 
     //昵称
@@ -62,85 +115,31 @@ static NSString *cellID = @"cellID";
     [self.headerView addSubview:QRcode];
 
     [avatar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.headerView).offset(20);
+        make.centerY.equalTo(self.headerView);
         make.size.mas_offset(CGSizeMake(60, 60));
-        make.top.equalTo(self.headerView.mas_top).offset(20);
-        make.left.equalTo(self.headerView.mas_left).offset(20);
     }];
     
     [nickname mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(avatar.mas_top).offset(5);
+        make.top.equalTo(avatar).offset(5);
         make.left.equalTo(avatar.mas_right).offset(10);
-        make.right.equalTo(QRcode.mas_left).offset(-10);
+        make.right.mas_lessThanOrEqualTo(QRcode.mas_left).offset(-10);
     }];
     
     [intro mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(nickname.mas_left);
         make.bottom.equalTo(avatar.mas_bottom).offset(-5);
-        make.right.equalTo(QRcode.mas_left).offset(-10);
+        make.right.mas_lessThanOrEqualTo(QRcode.mas_left).offset(-10);
     }];
     
     [QRcode mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_offset(CGSizeMake(25, 25));
-        make.right.equalTo(self.headerView.mas_right).offset(-20);
+        make.right.equalTo(self.headerView).offset(-20);
         make.centerY.equalTo(self.headerView);
+        make.size.mas_offset(CGSizeMake(25, 25));
     }];
 }
 
-- (void)enterUserInfo {
-    UserInfoViewController *userInfoVC = [[UserInfoViewController alloc] init];
-    [self.navigationController pushViewController:userInfoVC animated:YES];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MeCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
-
-    cell.icon.image = [UIImage imageNamed:[self.imageArray objectAtIndex:indexPath.row]];
-    cell.title.text = [self.dataArray objectAtIndex:indexPath.row];
-
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    switch (indexPath.row) {
-        case 0:{//统计
-            StatisticsViewController *statisticsVC = [[StatisticsViewController alloc] init];
-            [self.navigationController pushViewController:statisticsVC animated:YES];
-            break;
-        }
-        case 1:{//账户
-            AccountViewController *accountVC = [[AccountViewController alloc] init];
-            [self.navigationController pushViewController:accountVC animated:YES];
-            break;
-        }
-        case 2:{//设置
-            SettingViewController *settingVC = [[SettingViewController alloc] init];
-            [self.navigationController pushViewController:settingVC animated:YES];
-            break;
-        }
-        default:
-            break;
-    }
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView *view = [[UIView alloc] init];
-    
-    return view;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 10.0f;
-}
-
-- (NSMutableArray *)imageArray {
-    if (!_imageArray) {
-        _imageArray = [NSMutableArray arrayWithArray:@[@"me_statistical", @"me_account", @"me_setting"]];
-    }
-    return _imageArray;
-}
-
+#pragma mark - lazy load
 - (UIView *)headerView {
     if (!_headerView) {
         _headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 100)];
